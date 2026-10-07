@@ -24,7 +24,7 @@ Los cambios se hacen editando archivos; esta primera versión no incluye un pane
 
 ## Tipografía y estética
 
-Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Los títulos utilizan Cormorant Garamond, una tipografía serif con licencia OFL incluida en `fuentes/cormorantgaramond-OFL.txt`. Los textos mantienen Montserrat. Las fuentes anteriores se conservan como archivos para posibles pruebas, pero no se cargan en la web. El PDF de la revista no está incluido: se añadirá cuando se disponga de una versión accesible.
+Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. Las fuentes anteriores se conservan como archivos para posibles pruebas, pero no se cargan en la web. El PDF de la revista no está incluido: se añadirá cuando se disponga de una versión accesible.
 
 ## Navegación
 
@@ -32,7 +32,7 @@ Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural 
 
 ## Portada
 
-El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. Courier New, con Courier y monospace como alternativas del sistema, aporta el aspecto de una máquina de escribir al nombre y a la portada; Cormorant Garamond y Montserrat permanecen en la galería y los textos.
+El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. Courier New aporta el aspecto de una máquina de escribir al nombre, la portada y todos los títulos de apartados, obras y proyectos; los textos mantienen Montserrat.
 
 La referencia de papelería se refleja en la portada como una carpeta malva con tres pestañas navegables (Pintura, Proyectos y Sobre mí), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
 
