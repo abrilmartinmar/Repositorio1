@@ -38,6 +38,6 @@ nav{gap:24px}nav a{white-space:nowrap}.marca{font-size:34px}h1{font-size:clamp(4
 h1,h2,h3,.nombre-carpeta,.barra-revista>p{font-family:"Courier New",Courier,monospace;font-weight:400;font-synthesis:none}
 
 /* La cuadrícula ocupa todo el ancho y deja más aire alrededor de la carpeta. */
-.presentacion{padding:145px 32px 105px}.presentacion:before{left:calc((100% - 100vw)/2);right:calc((100% - 100vw)/2);top:0;bottom:0;background-size:52px 52px;mask-image:linear-gradient(to bottom,black 82%,transparent 100%)}#proyectos .proyectos{grid-template-columns:repeat(2,minmax(0,1fr))}.mirada-carpetas{grid-template-columns:repeat(3,minmax(0,1fr))}.lista-trayectoria{list-style:none;padding:0}.lista-trayectoria li{border-top:1px solid var(--linea);padding:16px 0;margin:0}.sobre h3{font-size:24px}.cabecera>p{max-width:270px;text-align:right}
-@media(max-width:850px){#proyectos .proyectos,.mirada-carpetas{grid-template-columns:minmax(0,1fr)}}
+.presentacion{padding:145px 32px 105px}.presentacion:before{left:calc((100% - 100vw)/2);right:calc((100% - 100vw)/2);top:0;bottom:0;background-size:52px 52px;mask-image:linear-gradient(to bottom,black 82%,transparent 100%)}#proyectos .proyectos{grid-template-columns:repeat(2,minmax(0,1fr))}.lista-formacion{list-style:none;padding:0}.lista-formacion li{border-top:1px solid var(--linea);padding:16px 0;margin:0}.sobre h3{font-size:24px}.cabecera>p{max-width:270px;text-align:right}
+@media(max-width:850px){#proyectos .proyectos{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:700px){.presentacion{padding:105px 8px 70px}.presentacion:before{background-size:40px 40px}.cabecera>p{text-align:left}.sobre{gap:25px}}

@@ -12,7 +12,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## Modificarla
 
-- `contenido.js`: obras, títulos, datos, descripción, biografía, trayectoria y mirada. Los textos iniciales son ejemplos.
+- `contenido.js`: obras, títulos, datos, descripción, biografía, formación, residencias e intereses. Los textos iniciales son ejemplos.
 - Guarda fotografías en `imagenes/` y usa, por ejemplo, `imagen: 'imagenes/mi-cuadro.jpg'`. Las imágenes vacías muestran composiciones gráficas de ejemplo.
 - Añade objetos a `obras` para ampliar la galería.
 - Cada obra tiene `categoria: 'paisaje-del-natural'` para paisajes pintados observando directamente el entorno, o `categoria: 'otras-obras'` para el resto. Las carpetas de Obras recientes utilizan ese campo; las obras sin categoría se muestran en Otras obras. Las categorías de las composiciones de ejemplo son demostrativas.
@@ -28,13 +28,13 @@ Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con 
 
 ## Navegación
 
-Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Portfolio contiene Revista e Ilustración; Mirada reúne Intereses artísticos, Referentes y Notas de taller. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
+Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Proyectos contiene Revista e Ilustración. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
 
 ## Portada
 
 El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. Courier New aporta el aspecto de una máquina de escribir al nombre, la portada y todos los títulos de apartados, obras y proyectos; los textos mantienen Montserrat.
 
-La referencia de papelería se refleja en la portada como una carpeta malva con tres pestañas navegables (Pintura, Portfolio y Mirada), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
+La referencia de papelería se refleja en la portada como una carpeta malva con tres pestañas navegables (Pintura, Proyectos y Sobre mí), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
 
 ## Revista y lector de PDF
 
@@ -50,9 +50,10 @@ La portada no abre el lector: el inicio está en `index.html`, y la revista se a
 
 ## Organización de la web
 
-- Pintura: núcleo del portfolio, con óleos y categorías Paisajes del natural y Otras pinturas.
-- Portfolio: ilustración y diseño editorial; la carpeta Revista abre su página de lectura.
-- Trayectoria: biografía y formación; `trayectoria` en `contenido.js` permite añadir exposiciones y residencias cuando se faciliten los datos. Por ahora solo se incluye el ciclo superior de Ilustración, confirmado por Mar.
-- Mirada: intereses artísticos, referentes y notas de taller. Los textos actuales señalan contenidos por incorporar y no atribuyen referentes concretos.
+La web completa funciona como portfolio personal; no hay una sección adicional llamada Portfolio.
 
-La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina, ahora de ancho completo con celdas de 52 px (40 px en móvil) y más espacio alrededor de la carpeta.
+- Pintura: núcleo de la web, con óleos y categorías Paisajes del natural y Otras pinturas.
+- Proyectos: revista e ilustración. La revista mantiene su página de lectura independiente.
+- Sobre mí: biografía y formación. Los campos `residencias` e `intereses` en `contenido.js` añaden contenido dentro de este apartado; esos bloques solo aparecen cuando tienen datos. Por ahora se muestra únicamente la formación confirmada por Mar. No se incluyen exposiciones ni residencias inventadas.
+
+La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina de ancho completo con celdas de 52 px (40 px en móvil).

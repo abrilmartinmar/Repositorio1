@@ -97,12 +97,23 @@ items.forEach((item, i) => {
   document.querySelector(target).append(link);
 });
 }
-renderCarpetas(data.proyectos, '#lista-proyectos', 'Portfolio');
-renderCarpetas(data.mirada, '#lista-mirada', 'Mirada artística');
+renderCarpetas(data.proyectos, '#lista-proyectos', 'Proyectos');
 document.querySelector('#biografia').textContent = data.biografia;
-data.trayectoria.forEach(text => {
-  const li = document.createElement('li'); li.textContent = text;
-  document.querySelector('#trayectoria').append(li);
-});
+function renderLista(items, selector) {
+  items.forEach(text => {
+    const li = document.createElement('li');
+    li.textContent = text;
+    document.querySelector(selector).append(li);
+  });
+}
+renderLista(data.formacion, '#formacion');
+if (data.residencias.length) {
+  renderLista(data.residencias, '#residencias');
+  document.querySelector('#bloque-residencias').hidden = false;
+}
+if (data.intereses.trim()) {
+  document.querySelector('#intereses').textContent = data.intereses;
+  document.querySelector('#bloque-intereses').hidden = false;
+}
 document.querySelector('#cerrar').addEventListener('click', () => modal.close());
 modal.addEventListener('click', event => { if (event.target === modal) { const r = modal.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) modal.close(); } });
