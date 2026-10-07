@@ -24,7 +24,7 @@ function openDetail(title, details, description, item) {
   if (item) image.append(artwork(item));
   modal.showModal();
 }
-const categorias = { 'paisaje-del-natural': 'Paisajes del natural', 'otras-obras': 'Otras obras' };
+const categorias = { 'paisaje-del-natural': 'Paisajes del natural', 'otras-obras': 'Otras pinturas' };
 function categoriaObra(item) {
   return Object.hasOwn(categorias, item.categoria) ? item.categoria : 'otras-obras';
 }
@@ -72,10 +72,16 @@ document.querySelectorAll('[data-categoria]').forEach(button => {
     mostrarObras(button.dataset.categoria);
   });
 });
+document.querySelectorAll('[data-conteo]').forEach(label => {
+  const filtro = label.dataset.conteo;
+  const count = data.obras.filter(item => filtro === 'todas' || categoriaObra(item) === filtro).length;
+  label.textContent = `${count} ${count === 1 ? 'obra' : 'obras'}`;
+});
 mostrarObras();
 data.proyectos.forEach((item, i) => {
   const link = document.createElement(item.enlace ? 'a' : 'button');
-  link.className = 'proyecto';
+  link.className = 'proyecto carpeta-proyecto';
+  if (!item.enlace) link.type = 'button';
   if (item.enlace) link.href = item.enlace;
   else link.addEventListener('click', () => openDetail(item.titulo, 'Proyecto en preparación', item.contenido));
   const number = document.createElement('span');
@@ -84,7 +90,7 @@ data.proyectos.forEach((item, i) => {
   const title = document.createElement('h3'); title.textContent = item.titulo;
   const description = document.createElement('p'); description.textContent = item.texto;
   text.append(title, description);
-  const arrow = document.createElement('span'); arrow.textContent = '↗'; arrow.setAttribute('aria-hidden', 'true');
+  const arrow = document.createElement('span'); arrow.textContent = 'Abrir carpeta ↗'; arrow.setAttribute('aria-hidden', 'true');
   link.append(number, text, arrow);
   document.querySelector('#lista-proyectos').append(link);
 });

@@ -7,9 +7,9 @@ window.portfolio = {
     { titulo: 'Entre azules', categoria: 'otras-obras', datos: 'Óleo sobre lienzo · Medidas y año por añadir', imagen: '', estilo: 'azul', descripcion: 'Obra de ejemplo de la categoría Otras obras. Añade una fotografía y la información de tu pintura.' }
   ],
   proyectos: [
-    { titulo: 'Revista · Proyecto editorial', texto: 'Un proyecto de mi etapa de formación en ilustración.', contenido: 'He realizado el ciclo superior de Ilustración. Esta revista es uno de mis proyectos editoriales. Próximamente compartiré su portada, páginas y más detalles del proceso.' },
-    { titulo: 'Cuaderno de ideas', texto: 'Bocetos, procesos y caminos por explorar.', contenido: 'Aquí podrás compartir páginas de tus cuadernos, dibujos y el proceso que hay detrás de tus obras.' },
-    { titulo: 'Otros proyectos', texto: 'Un lugar para lo que está por venir.', contenido: 'Este apartado está preparado para tus otros proyectos. Cuando tengas una página publicada, añade su URL en el campo enlace de contenido.js.' }
+    { titulo: 'Revista', texto: 'Un proyecto de mi etapa de formación en ilustración.', contenido: 'He realizado el ciclo superior de Ilustración. Esta revista es uno de mis proyectos editoriales. Próximamente compartiré su portada, páginas y más detalles del proceso.' },
+    { titulo: 'Ilustración y bocetos', texto: 'Bocetos, procesos y caminos por explorar.', contenido: 'Aquí podrás compartir páginas de tus cuadernos, dibujos y el proceso que hay detrás de tus obras.' },
+    { titulo: 'Otros proyectos', texto: 'Un lugar para lo que está por venir.', contenido: 'Aquí compartiré nuevos proyectos y otras ideas que vaya desarrollando. Este espacio irá creciendo poco a poco.' }
   ],
   biografia: 'Soy Mar Abril y he realizado el ciclo superior de Ilustración. En este espacio comparto mis cuadros de pintura al óleo, proyectos de ilustración y diseño editorial, y las curiosidades que me acompañan cuando creo.',
   curiosidades: ['Una inspiración que quiero compartir…', 'Algo que me gusta hacer fuera del estudio…', 'Un lugar al que siempre vuelvo…']
