@@ -15,6 +15,7 @@ window.portfolio = {
     { titulo: 'Ilustración', texto: 'Una selección de proyectos y dibujos.', contenido: 'Este espacio reunirá mis proyectos de ilustración. Próximamente compartiré las imágenes y la historia de cada pieza.' }
   ],
   correo: 'marabrilmartin@gmail.com',
+  instagram: 'mareaaada',
   biografia: `Mi práctica artística se centra principalmente en la pintura al óleo, un medio a través del cual investigo la atmósfera de los espacios, la luz y la materialidad de la propia pintura.
 
 Mi trabajo nace de la observación de lugares cotidianos y de la intención de capturar la sensación que habita en ellos. Me interesa especialmente cómo la luz transforma el entorno y cómo la textura del óleo puede aportar presencia, profundidad y emoción a la imagen. Busco que cada pintura conserve algo vivo y sensible, tanto en la pincelada como en la construcción del ambiente.`,

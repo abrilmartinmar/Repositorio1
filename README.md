@@ -93,3 +93,5 @@ El campo `encuadre` de esta obra define el rectángulo visible de la fotografía
 ## Fecha y contacto
 
 La cabecera muestra la fecha del día en español (zona Europe/Madrid), en lugar de repetir el nombre de la portada. `sitio.js` actualiza las dos páginas y sus enlaces de correo. El contacto público es `marabrilmartin@gmail.com`, editable en `contenido.js`, y abre el programa de correo mediante `mailto:`. No se envían mensajes automáticamente.
+
+El Instagram facilitado por Mar es `@mareaaada`. Aparece junto al correo en las dos páginas y enlaza a `https://www.instagram.com/mareaaada/` en una pestaña nueva. Se edita mediante el campo `instagram` de `contenido.js`.

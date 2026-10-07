@@ -14,4 +14,9 @@
     link.textContent = email;
     link.href = `mailto:${email}`;
   });
+  document.querySelectorAll('[data-instagram]').forEach(link => {
+    const account = window.portfolio.instagram;
+    link.textContent = `Instagram · @${account}`;
+    link.href = `https://www.instagram.com/${account}/`;
+  });
 })();
