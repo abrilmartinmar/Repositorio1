@@ -84,3 +84,7 @@ El campo `encuadre` de esta obra define el rectángulo visible de la fotografía
 ## Sonidos
 
 `sonidos.js` genera un clic breve al activar botones, carpetas y enlaces, y un roce de papel al pasar páginas en el lector (también con las flechas del teclado o el salto de página). El sonido empieza solo tras una interacción, nunca al cargar la web. El control «Sonido: sí/no» permite silenciar ambos efectos y recuerda la preferencia en el navegador. No requiere archivos de audio, servicios externos ni paquetes; si Web Audio o el almacenamiento no están disponibles, la web sigue funcionando.
+
+## Me fui a comer y acabé desayunando
+
+Óleo sobre madera de 70 × 90 cm, con título, soporte y unidad de medida confirmados por Mar. La descripción sobre la fiesta flamenca se ha reescrito a petición suya, manteniendo la energía nocturna y el caos de la celebración. El archivo HEIF de «Cuadro fiesta recortado.zip» se conserva en `imagenes/originales/me-fui-a-comer-y-acabe-desayunando.heif`. Para los navegadores se decodificó con `heif-convert` a `imagenes/me-fui-a-comer-y-acabe-desayunando.png`, sin reducción de resolución (3325 × 2594), recorte ni retoques. Se incluye en Otras pinturas; no se inventa una fecha.
