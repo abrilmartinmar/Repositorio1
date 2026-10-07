@@ -12,6 +12,16 @@ function artwork(item) {
     if (item.ancho && item.alto) { img.width = item.ancho; img.height = item.alto; }
     box.classList.add('pintura-real');
     if (item.ancho && item.alto) box.style.aspectRatio = `${item.ancho} / ${item.alto}`;
+    if (item.encuadre && item.ancho && item.alto) {
+      const crop = item.encuadre;
+      box.classList.add('pintura-encuadrada');
+      box.style.aspectRatio = `${crop.ancho} / ${crop.alto}`;
+      box.style.setProperty('--proporcion', crop.ancho / crop.alto);
+      img.style.width = `${item.ancho / crop.ancho * 100}%`;
+      img.style.height = `${item.alto / crop.alto * 100}%`;
+      img.style.left = `${-crop.x / crop.ancho * 100}%`;
+      img.style.top = `${-crop.y / crop.alto * 100}%`;
+    }
     if (item.giro && item.ancho && item.alto) {
       box.classList.add('pintura-girada');
       box.style.aspectRatio = `${item.alto} / ${item.ancho}`;
