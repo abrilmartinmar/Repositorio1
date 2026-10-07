@@ -60,3 +60,13 @@ La web completa funciona como portfolio personal; no hay una sección adicional 
 La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina de ancho completo con celdas de 52 px (40 px en móvil).
 
 La biografía y el texto «La mancha y el color» se basan en el relato de Mar: el dibujo en Bachillerato de Artes, su acercamiento a la pintura mientras estudiaba Integración Social y su interés por la mancha, la construcción de la forma y los tonos. Bachillerato e Integración Social se describen como estudios, sin atribuir títulos completados ni fechas no confirmadas.
+
+## Primera obra recibida
+
+`imagenes/mar-abril-03.png` contiene la imagen original del ZIP Mar Abril-3, sin recorte, reducción ni modificación de píxeles (3177 × 5087). Sustituye las tres obras gráficas de ejemplo. La obra se titula «No te vayas de mi lao» y su técnica es óleo sobre lienzo, según los datos aportados por Mar. Su descripción recoge su investigación del contraluz, la atmósfera y la relación entre figura y luz en una cueva del Sacromonte. Año y medidas siguen pendientes y no se han inventado. Se muestra en Otras pinturas; el detalle permite abrir el original. La imagen se carga de forma diferida para que su tamaño no bloquee la portada.
+
+## Segunda obra recibida
+
+«Mi reflejo» es un óleo sobre lienzo de 61 × 50 cm. Mar describe su origen en una fotografía tomada en la cueva de una amiga en el Sacromonte y su exploración de una textura nacarada en el reflejo. `imagenes/mar-abril-01.png` conserva el original del ZIP Mar Abril (2907 × 3533), sin recorte ni modificación. Se incluye en Otras pinturas con su ficha y acceso al original. No se atribuye un año de realización sin confirmación.
+
+Las descripciones de las dos obras conservan literalmente los textos proporcionados por Mar. «Mi reflejo» incluye además «Detalle del rostro» en su ficha: `imagenes/mi-reflejo-detalle.png` conserva el archivo de 6000 × 4000 del ZIP Mar Abril editada julia-3. Se orienta mediante CSS en el visor, sin alterar el archivo. Los botones permiten alternar entre la obra completa y el detalle; el enlace al original corresponde a la vista seleccionada. El detalle se carga solo al seleccionarlo.

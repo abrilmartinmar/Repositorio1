@@ -6,7 +6,20 @@ function artwork(item) {
   if (item.imagen) {
     const img = document.createElement('img');
     img.src = item.imagen;
-    img.alt = item.titulo;
+    img.alt = item.alt || item.titulo;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    if (item.ancho && item.alto) { img.width = item.ancho; img.height = item.alto; }
+    box.classList.add('pintura-real');
+    if (item.ancho && item.alto) box.style.aspectRatio = `${item.ancho} / ${item.alto}`;
+    if (item.giro && item.ancho && item.alto) {
+      box.classList.add('pintura-girada');
+      box.style.aspectRatio = `${item.alto} / ${item.ancho}`;
+      box.style.setProperty('--proporcion', item.alto / item.ancho);
+      img.style.width = `${item.ancho / item.alto * 100}%`;
+      img.style.height = `${item.alto / item.ancho * 100}%`;
+      img.style.transform = `translate(-50%, -50%) rotate(${item.giro}deg)`;
+    }
     box.append(img);
   } else {
     const label = document.createElement('span');
@@ -22,7 +35,31 @@ function openDetail(title, details, description, item) {
   document.querySelector('#detalle-descripcion').textContent = description;
   const image = document.querySelector('#detalle-imagen');
   image.replaceChildren();
-  if (item) image.append(artwork(item));
+  const original = document.querySelector('#ver-imagen-original');
+  const views = document.querySelector('#vistas-obra');
+  views.replaceChildren();
+  views.hidden = !item?.detalles?.length;
+  original.hidden = !item?.imagen;
+  original.removeAttribute('href');
+  if (item) {
+    const showView = (view, selected) => {
+      image.replaceChildren(artwork(view));
+      original.href = view.imagen;
+      views.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button === selected)));
+    };
+    if (item.detalles?.length) {
+      [{ ...item, titulo: 'Obra completa' }, ...item.detalles].forEach((view, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = view.titulo;
+        button.setAttribute('aria-controls', 'detalle-imagen');
+        button.setAttribute('aria-pressed', String(index === 0));
+        button.addEventListener('click', () => showView(view, button));
+        views.append(button);
+      });
+    }
+    showView(item, views.firstElementChild);
+  }
   modal.showModal();
 }
 const categorias = { 'paisaje-del-natural': 'Paisajes del natural', 'otras-obras': 'Otras pinturas' };
