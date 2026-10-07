@@ -59,7 +59,7 @@ La web completa funciona como portfolio personal; no hay una sección adicional 
 
 La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina de ancho completo con celdas de 52 px (40 px en móvil).
 
-La biografía y el texto «La mancha y el color» se basan en el relato de Mar: el dibujo en Bachillerato de Artes, su acercamiento a la pintura mientras estudiaba Integración Social y su interés por la mancha, la construcción de la forma y los tonos. Bachillerato e Integración Social se describen como estudios, sin atribuir títulos completados ni fechas no confirmadas.
+Sobre mí muestra el texto de Mar sobre la pintura al óleo, la atmósfera, la luz y la materialidad, junto a un párrafo sobre la dimensión social que enlaza a la revista. Los párrafos se editan en `biografia` y `enfoqueSocial` dentro de `contenido.js`. Bachillerato e Integración Social se describen como estudios, sin atribuir títulos completados ni fechas no confirmadas.
 
 ## Primera obra recibida
 
@@ -88,3 +88,8 @@ El campo `encuadre` de esta obra define el rectángulo visible de la fotografía
 ## Me fui a comer y acabé desayunando
 
 Óleo sobre madera de 70 × 90 cm, con título, soporte y unidad de medida confirmados por Mar. La descripción sobre la fiesta flamenca se ha reescrito a petición suya, manteniendo la energía nocturna y el caos de la celebración. El archivo HEIF de «Cuadro fiesta recortado.zip» se conserva en `imagenes/originales/me-fui-a-comer-y-acabe-desayunando.heif`. Para los navegadores se decodificó con `heif-convert` a `imagenes/me-fui-a-comer-y-acabe-desayunando.png`, sin reducción de resolución (3325 × 2594), recorte ni retoques. Se incluye en Otras pinturas; no se inventa una fecha.
+
+
+## Fecha y contacto
+
+La cabecera muestra la fecha del día en español (zona Europe/Madrid), en lugar de repetir el nombre de la portada. `sitio.js` actualiza las dos páginas y sus enlaces de correo. El contacto público es `marabrilmartin@gmail.com`, editable en `contenido.js`, y abre el programa de correo mediante `mailto:`. No se envían mensajes automáticamente.

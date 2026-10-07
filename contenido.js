@@ -14,10 +14,14 @@ window.portfolio = {
   proyectos: [
     { titulo: 'Ilustración', texto: 'Una selección de proyectos y dibujos.', contenido: 'Este espacio reunirá mis proyectos de ilustración. Próximamente compartiré las imágenes y la historia de cada pieza.' }
   ],
-  biografia: 'Mi acercamiento a la pintura fue natural. Siempre me había inquietado el arte y, durante mis estudios de Bachillerato de Artes, me encantaba dibujar. Por entonces tenía pocos recursos y oportunidades para aprender pintura, especialmente al óleo. Mientras estudiaba Integración Social, empecé a descubrir cuánto disfrutaba pintando.',
+  correo: 'marabrilmartin@gmail.com',
+  biografia: `Mi práctica artística se centra principalmente en la pintura al óleo, un medio a través del cual investigo la atmósfera de los espacios, la luz y la materialidad de la propia pintura.
+
+Mi trabajo nace de la observación de lugares cotidianos y de la intención de capturar la sensación que habita en ellos. Me interesa especialmente cómo la luz transforma el entorno y cómo la textura del óleo puede aportar presencia, profundidad y emoción a la imagen. Busco que cada pintura conserve algo vivo y sensible, tanto en la pincelada como en la construcción del ambiente.`,
+  enfoqueSocial: 'La dimensión social también es importante en mi práctica artística. Está presente en mi forma de mirar y se refleja en proyectos como mi revista, donde esta inquietud encuentra otro espacio de expresión.',
   formacion: ['Estudios de Bachillerato de Artes', 'Estudios de Integración Social', 'Ciclo superior de Ilustración'],
   // Añade aquí las residencias realizadas; el bloque aparece solo cuando hay datos.
   residencias: [],
   // Texto personal sobre tus intereses; se muestra dentro de Sobre mí al completarlo.
-  intereses: 'Me fascina esa parte más abstracta de pintar: empezar con una mancha y ver cómo, poco a poco, se va construyendo algo. Ese proceso me recuerda a la escultura, a ir dando forma a lo que todavía no estaba definido. El color también me vuelve loca, especialmente sus tonos.'
+  intereses: ''
 };
