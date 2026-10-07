@@ -55,7 +55,7 @@
       filter.type = 'bandpass';
       filter.frequency.value = kind === 'pagina' ? 1900 : 1400;
       filter.Q.value = 0.55;
-      volume.gain.value = kind === 'pagina' ? 0.16 : 0.3;
+      volume.gain.value = kind === 'pagina' ? 0.32 : 0.6;
       source.connect(filter).connect(volume).connect(output);
       source.onended = () => { source.disconnect(); filter.disconnect(); volume.disconnect(); };
       source.start();
