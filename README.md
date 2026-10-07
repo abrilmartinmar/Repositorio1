@@ -80,3 +80,7 @@ El campo `encuadre` de esta obra define el rectángulo visible de la fotografía
 ## Soledad de verano
 
 Óleo sobre lienzo, con el título y la descripción de Mar sobre La Caleta de Salobreña conservados literalmente. `imagenes/soledad-de-verano.png` contiene el original del nuevo ZIP Mar Abril-3 (3725 × 3725), sin modificaciones; la ruta es distinta de la primera obra recibida, aunque los ZIP compartan nombre. No se inventan año ni medidas. Mar confirma que la pintó a partir de una fotografía, por lo que se incluye en Otras pinturas.
+
+## Sonidos
+
+`sonidos.js` genera un clic breve al activar botones, carpetas y enlaces, y un roce de papel al pasar páginas en el lector (también con las flechas del teclado o el salto de página). El sonido empieza solo tras una interacción, nunca al cargar la web. El control «Sonido: sí/no» permite silenciar ambos efectos y recuerda la preferencia en el navegador. No requiere archivos de audio, servicios externos ni paquetes; si Web Audio o el almacenamiento no están disponibles, la web sigue funcionando.

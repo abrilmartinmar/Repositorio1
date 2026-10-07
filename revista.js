@@ -129,7 +129,10 @@ async function render(direction = 0) {
     scrollArea.scrollTop = 0;
     scrollArea.scrollLeft = Math.max(0, (width - scrollArea.clientWidth) / 2);
     updateControls();
-    if (direction) await turnAnimation(oldLeaf, direction);
+    if (direction) {
+      document.dispatchEvent(new Event('pasar-hoja'));
+      await turnAnimation(oldLeaf, direction);
+    }
   } catch (error) {
     reportError(error);
     throw error;
@@ -196,6 +199,7 @@ fileInput.addEventListener('change', async () => {
 });
 async function go(direction) {
   if (busy || !documentPdf || (direction > 0 ? next.disabled : previous.disabled)) return;
+  document.dispatchEvent(new Event('preparar-sonido'));
   const oldPage = currentPage;
   currentPage = mobile.matches ? currentPage + direction
     : direction > 0 ? currentPage === 1 ? 2 : currentPage + 2
@@ -210,8 +214,10 @@ jump.addEventListener('change', async () => {
   const page = Number(jump.value);
   if (!Number.isInteger(page) || page < 1 || page > documentPdf.numPages) { jump.value = currentPage; return; }
   const oldPage = currentPage;
+  if (page === oldPage) return;
+  document.dispatchEvent(new Event('preparar-sonido'));
   currentPage = page;
-  try { await render(); } catch { currentPage = oldPage; updateControls(); }
+  try { await render(Math.sign(page - oldPage)); } catch { currentPage = oldPage; updateControls(); }
 });
 async function changeZoom(delta) {
   if (busy || !documentPdf) return;
