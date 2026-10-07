@@ -33,3 +33,5 @@ Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural 
 ## Portada
 
 El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. DotGothic16 (licencia en `fuentes/dotgothic16-OFL.txt`) aporta un detalle pixelado al nombre y a la portada; Cormorant Garamond y Montserrat permanecen en la galería y los textos.
+
+La referencia de papelería se refleja en la portada como una carpeta malva con tres pestañas navegables (Pintura, Proyectos y Sobre mí), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
