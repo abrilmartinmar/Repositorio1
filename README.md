@@ -29,3 +29,7 @@ Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con 
 ## Navegación
 
 Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Ilustración y proyectos contiene Revista, Ilustración y bocetos y Otros proyectos. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
+
+## Portada
+
+El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. DotGothic16 (licencia en `fuentes/dotgothic16-OFL.txt`) aporta un detalle pixelado al nombre y a la portada; Cormorant Garamond y Montserrat permanecen en la galería y los textos.
