@@ -8,7 +8,7 @@ window.portfolio = {
   ],
   revista: { titulo: 'Mi revista', archivo: '' },
   proyectos: [
-    { titulo: 'Revista', enlace: '#revista', texto: 'Un proyecto de mi etapa de formación en ilustración.', contenido: 'He realizado el ciclo superior de Ilustración. Esta revista es uno de mis proyectos editoriales. Próximamente compartiré su portada, páginas y más detalles del proceso.' },
+    { titulo: 'Revista', enlace: 'revista.html', texto: 'Un proyecto de mi etapa de formación en ilustración.', contenido: 'He realizado el ciclo superior de Ilustración. Esta revista es uno de mis proyectos editoriales. Próximamente compartiré su portada, páginas y más detalles del proceso.' },
     { titulo: 'Ilustración y bocetos', texto: 'Bocetos, procesos y caminos por explorar.', contenido: 'Aquí podrás compartir páginas de tus cuadernos, dibujos y el proceso que hay detrás de tus obras.' },
     { titulo: 'Otros proyectos', texto: 'Un lugar para lo que está por venir.', contenido: 'Aquí compartiré nuevos proyectos y otras ideas que vaya desarrollando. Este espacio irá creciendo poco a poco.' }
   ],
