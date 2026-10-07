@@ -28,17 +28,17 @@ Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con 
 
 ## Navegación
 
-Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Proyectos contiene Revista e Ilustración. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
+Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos contiene Ilustración. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
 
 ## Portada
 
 El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. Courier New aporta el aspecto de una máquina de escribir al nombre, la portada y todos los títulos de apartados, obras y proyectos; los textos mantienen Montserrat.
 
-La referencia de papelería se refleja en la portada como una carpeta malva con tres pestañas navegables (Pintura, Proyectos y Sobre mí), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
+La referencia de papelería se refleja en la portada como una carpeta malva con cuatro pestañas navegables (Pintura, Revista, Proyectos y Sobre mí), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
 
 ## Revista y lector de PDF
 
-La página independiente `revista.html`, accesible desde el menú y la carpeta Revista, ofrece portada, hojas enfrentadas en escritorio, una página en móvil, paso de hojas animado, texto seleccionable, zoom, salto a página, pantalla completa y descarga. Las animaciones respetan la preferencia de movimiento reducido.
+La página independiente `revista.html`, accesible desde el menú y su pestaña de portada, ofrece portada, hojas enfrentadas en escritorio, una página en móvil, paso de hojas animado, texto seleccionable, zoom, salto a página, pantalla completa y descarga. Las animaciones respetan la preferencia de movimiento reducido.
 
 Mientras falta el archivo público, **Abrir mi PDF** permite leer una revista desde el ordenador: se procesa en el navegador y no se envía a ningún servidor. Ese archivo no queda publicado ni se conserva al recargar la página.
 
@@ -53,7 +53,8 @@ La portada no abre el lector: el inicio está en `index.html`, y la revista se a
 La web completa funciona como portfolio personal; no hay una sección adicional llamada Portfolio.
 
 - Pintura: núcleo de la web, con óleos y categorías Paisajes del natural y Otras pinturas.
-- Proyectos: revista e ilustración. La revista mantiene su página de lectura independiente.
+- Revista: apartado principal con su página de lectura independiente; se abre desde el menú o la portada.
+- Proyectos: ilustración y otros trabajos.
 - Sobre mí: biografía y formación. Los campos `residencias` e `intereses` en `contenido.js` añaden contenido dentro de este apartado; esos bloques solo aparecen cuando tienen datos. Por ahora se muestra únicamente la formación confirmada por Mar. No se incluyen exposiciones ni residencias inventadas.
 
 La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina de ancho completo con celdas de 52 px (40 px en móvil).

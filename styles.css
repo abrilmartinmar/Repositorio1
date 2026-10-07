@@ -41,3 +41,6 @@ h1,h2,h3,.nombre-carpeta,.barra-revista>p{font-family:"Courier New",Courier,mono
 .presentacion{padding:145px 32px 105px}.presentacion:before{left:calc((100% - 100vw)/2);right:calc((100% - 100vw)/2);top:0;bottom:0;background-size:52px 52px;mask-image:linear-gradient(to bottom,black 82%,transparent 100%)}#proyectos .proyectos{grid-template-columns:repeat(2,minmax(0,1fr))}.lista-formacion{list-style:none;padding:0}.lista-formacion li{border-top:1px solid var(--linea);padding:16px 0;margin:0}.sobre h3{font-size:24px}.cabecera>p{max-width:270px;text-align:right}
 @media(max-width:850px){#proyectos .proyectos{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:700px){.presentacion{padding:105px 8px 70px}.presentacion:before{background-size:40px 40px}.cabecera>p{text-align:left}.sobre{gap:25px}}
+
+/* La revista tiene una pestaña propia al mismo nivel que la pintura. */
+.pestanas-portada{grid-template-columns:repeat(4,minmax(0,1fr))}

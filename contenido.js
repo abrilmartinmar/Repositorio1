@@ -8,7 +8,6 @@ window.portfolio = {
   ],
   revista: { titulo: 'Mi revista', archivo: '' },
   proyectos: [
-    { titulo: 'Revista', enlace: 'revista.html', texto: 'Diseño editorial e ilustración.', contenido: 'Un proyecto de mi etapa de formación en ilustración.' },
     { titulo: 'Ilustración', texto: 'Una selección de proyectos y dibujos.', contenido: 'Este espacio reunirá mis proyectos de ilustración. Próximamente compartiré las imágenes y la historia de cada pieza.' }
   ],
   biografia: 'Mi acercamiento a la pintura fue natural. Siempre me había inquietado el arte y, durante mis estudios de Bachillerato de Artes, me encantaba dibujar. Por entonces tenía pocos recursos y oportunidades para aprender pintura, especialmente al óleo. Mientras estudiaba Integración Social, empecé a descubrir cuánto disfrutaba pintando.',
