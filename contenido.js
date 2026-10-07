@@ -11,10 +11,10 @@ window.portfolio = {
     { titulo: 'Revista', enlace: 'revista.html', texto: 'Diseño editorial e ilustración.', contenido: 'Un proyecto de mi etapa de formación en ilustración.' },
     { titulo: 'Ilustración', texto: 'Una selección de proyectos y dibujos.', contenido: 'Este espacio reunirá mis proyectos de ilustración. Próximamente compartiré las imágenes y la historia de cada pieza.' }
   ],
-  biografia: 'Soy Mar Abril y la pintura al óleo es el centro de mi práctica artística. Me he formado en el ciclo superior de Ilustración, desde el que también exploro proyectos de ilustración y diseño editorial.',
-  formacion: ['Ciclo superior de Ilustración'],
+  biografia: 'Mi acercamiento a la pintura fue natural. Siempre me había inquietado el arte y, durante mis estudios de Bachillerato de Artes, me encantaba dibujar. Por entonces tenía pocos recursos y oportunidades para aprender pintura, especialmente al óleo. Mientras estudiaba Integración Social, empecé a descubrir cuánto disfrutaba pintando.',
+  formacion: ['Estudios de Bachillerato de Artes', 'Estudios de Integración Social', 'Ciclo superior de Ilustración'],
   // Añade aquí las residencias realizadas; el bloque aparece solo cuando hay datos.
   residencias: [],
   // Texto personal sobre tus intereses; se muestra dentro de Sobre mí al completarlo.
-  intereses: ''
+  intereses: 'Me fascina esa parte más abstracta de pintar: empezar con una mancha y ver cómo, poco a poco, se va construyendo algo. Ese proceso me recuerda a la escultura, a ir dando forma a lo que todavía no estaba definido. El color también me vuelve loca, especialmente sus tonos.'
 };

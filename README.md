@@ -57,3 +57,5 @@ La web completa funciona como portfolio personal; no hay una sección adicional 
 - Sobre mí: biografía y formación. Los campos `residencias` e `intereses` en `contenido.js` añaden contenido dentro de este apartado; esos bloques solo aparecen cuando tienen datos. Por ahora se muestra únicamente la formación confirmada por Mar. No se incluyen exposiciones ni residencias inventadas.
 
 La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina de ancho completo con celdas de 52 px (40 px en móvil).
+
+La biografía y el texto «La mancha y el color» se basan en el relato de Mar: el dibujo en Bachillerato de Artes, su acercamiento a la pintura mientras estudiaba Integración Social y su interés por la mancha, la construcción de la forma y los tonos. Bachillerato e Integración Social se describen como estudios, sin atribuir títulos completados ni fechas no confirmadas.
