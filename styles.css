@@ -19,8 +19,7 @@ nav{gap:24px}nav a{white-space:nowrap}.marca{font-size:34px}h1{font-size:clamp(4
 @media(max-width:850px){header{flex-direction:column;align-items:flex-start;gap:25px}nav{flex-wrap:wrap;gap:12px 20px}.carpetas,.proyectos{grid-template-columns:minmax(0,1fr)}.carpetas{gap:22px}.carpetas button{min-height:140px}.carpeta-proyecto{min-height:180px}.cabecera>p{max-width:190px}h2{font-size:38px}}
 
 /* Portada breve sobre papel cuadriculado. */
-@font-face{font-family:"Special Elite";src:url("fuentes/SpecialElite-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-.presentacion{position:relative;isolation:isolate;padding:100px 34px 95px;min-height:330px}.presentacion:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(to right,rgba(189,53,110,.10) 1px,transparent 1px),linear-gradient(to bottom,rgba(189,53,110,.10) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to bottom,black 75%,transparent 100%)}.presentacion h1,.marca{font-family:"Special Elite","Courier New",monospace;font-weight:400;font-synthesis:none}.presentacion h1{font-size:clamp(46px,7vw,80px);line-height:1.25;letter-spacing:0;margin:0 0 28px}.marca{font-size:28px}.presentacion .introduccion{align-items:center}.presentacion .introduccion p{font-size:14px;background:rgba(255,255,255,.8);padding:3px 6px;margin-left:-6px}.presentacion .enlace{background:rgba(255,255,255,.8)}
+.presentacion{position:relative;isolation:isolate;padding:100px 34px 95px;min-height:330px}.presentacion:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(to right,rgba(189,53,110,.10) 1px,transparent 1px),linear-gradient(to bottom,rgba(189,53,110,.10) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to bottom,black 75%,transparent 100%)}.presentacion h1,.marca{font-family:"Courier New",Courier,monospace;font-weight:400;font-synthesis:none}.presentacion h1{font-size:clamp(46px,7vw,80px);line-height:1.25;letter-spacing:0;margin:0 0 28px}.marca{font-size:28px}.presentacion .introduccion{align-items:center}.presentacion .introduccion p{font-size:14px;background:rgba(255,255,255,.8);padding:3px 6px;margin-left:-6px}.presentacion .enlace{background:rgba(255,255,255,.8)}
 @media(max-width:700px){.presentacion{padding:65px 16px 60px;min-height:270px}.presentacion .introduccion{align-items:flex-start;gap:24px}.presentacion:before{background-size:24px 24px}.presentacion h1{font-size:clamp(40px,10vw,62px)}}
 
 /* Referencia de papelería: carpeta malva y pestañas suaves sobre la cuadrícula. */
@@ -34,5 +33,5 @@ nav{gap:24px}nav a{white-space:nowrap}.marca{font-size:34px}h1{font-size:clamp(4
 
 .volver-proyectos{display:inline-block;font-size:12px;margin-top:30px;color:var(--acento)}nav a[aria-current="page"]{color:var(--rosa);border-bottom:1px solid var(--rosa)}
 
-/* La textura de tinta está en los glifos originales, sin filtros sobre el texto. */
+/* Courier New usa la fuente instalada en el dispositivo. */
 .portada-carpeta h1{letter-spacing:.01em}.marca{font-size:26px}

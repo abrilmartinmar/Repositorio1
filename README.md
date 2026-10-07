@@ -32,7 +32,7 @@ Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural 
 
 ## Portada
 
-El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. Special Elite (licencia en `fuentes/specialelite-LICENSE.txt`) aporta el aspecto de una máquina de escribir con tinta irregular al nombre y a la portada; Cormorant Garamond y Montserrat permanecen en la galería y los textos.
+El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. Courier New, con Courier y monospace como alternativas del sistema, aporta el aspecto de una máquina de escribir al nombre y a la portada; Cormorant Garamond y Montserrat permanecen en la galería y los textos.
 
 La referencia de papelería se refleja en la portada como una carpeta malva con tres pestañas navegables (Pintura, Proyectos y Sobre mí), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
 
