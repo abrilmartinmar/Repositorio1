@@ -76,3 +76,7 @@ Las descripciones de las dos obras conservan literalmente los textos proporciona
 Óleo sobre lienzo, con el título y la descripción aportados literalmente por Mar. `imagenes/sal-que-te-cuente.png` conserva el original de `_DSC1363-2.zip` (3698 × 5734), sin recorte ni modificación. Se muestra en Otras pinturas, con acceso al archivo original en su ficha. Año y medidas no se incluyen al no haberse facilitado.
 
 El campo `encuadre` de esta obra define el rectángulo visible de la fotografía en píxeles del original: x 24, y 88, ancho 3646, alto 5510. La galería y la ficha ocultan el borde exterior de la foto mediante CSS, respetando las proporciones. El archivo original y el enlace de descarga siguen intactos. El ajuste es reversible desde `contenido.js`.
+
+## Soledad de verano
+
+Óleo sobre lienzo, con el título y la descripción de Mar sobre La Caleta de Salobreña conservados literalmente. `imagenes/soledad-de-verano.png` contiene el original del nuevo ZIP Mar Abril-3 (3725 × 3725), sin modificaciones; la ruta es distinta de la primera obra recibida, aunque los ZIP compartan nombre. No se inventan año ni medidas. Mar confirma que la pintó a partir de una fotografía, por lo que se incluye en Otras pinturas.
