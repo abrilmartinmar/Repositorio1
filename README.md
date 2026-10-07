@@ -70,3 +70,7 @@ La biografía y el texto «La mancha y el color» se basan en el relato de Mar: 
 «Mi reflejo» es un óleo sobre lienzo de 61 × 50 cm. Mar describe su origen en una fotografía tomada en la cueva de una amiga en el Sacromonte y su exploración de una textura nacarada en el reflejo. `imagenes/mar-abril-01.png` conserva el original del ZIP Mar Abril (2907 × 3533), sin recorte ni modificación. Se incluye en Otras pinturas con su ficha y acceso al original. No se atribuye un año de realización sin confirmación.
 
 Las descripciones de las dos obras conservan literalmente los textos proporcionados por Mar. «Mi reflejo» incluye además «Detalle del rostro» en su ficha: `imagenes/mi-reflejo-detalle.png` conserva el archivo de 6000 × 4000 del ZIP Mar Abril editada julia-3. Se orienta mediante CSS en el visor, sin alterar el archivo. Los botones permiten alternar entre la obra completa y el detalle; el enlace al original corresponde a la vista seleccionada. El detalle se carga solo al seleccionarlo.
+
+## Sal que te cuente
+
+Óleo sobre lienzo, con el título y la descripción aportados literalmente por Mar. `imagenes/sal-que-te-cuente.png` conserva el original de `_DSC1363-2.zip` (3698 × 5734), sin recorte ni modificación. Se muestra en Otras pinturas, con acceso al archivo original en su ficha. Año y medidas no se incluyen al no haberse facilitado.
