@@ -16,6 +16,7 @@ function artwork(item) {
   return box;
 }
 function openDetail(title, details, description, item) {
+  document.querySelector('#detalle .etiqueta').textContent = item ? 'Óleo / Colección' : details;
   document.querySelector('#detalle-titulo').textContent = title;
   document.querySelector('#detalle-datos').textContent = details;
   document.querySelector('#detalle-descripcion').textContent = description;
@@ -78,12 +79,13 @@ document.querySelectorAll('[data-conteo]').forEach(label => {
   label.textContent = `${count} ${count === 1 ? 'obra' : 'obras'}`;
 });
 mostrarObras();
-data.proyectos.forEach((item, i) => {
+function renderCarpetas(items, target, context) {
+items.forEach((item, i) => {
   const link = document.createElement(item.enlace ? 'a' : 'button');
   link.className = 'proyecto carpeta-proyecto';
   if (!item.enlace) link.type = 'button';
   if (item.enlace) link.href = item.enlace;
-  else link.addEventListener('click', () => openDetail(item.titulo, 'Proyecto en preparación', item.contenido));
+  else link.addEventListener('click', () => openDetail(item.titulo, context, item.contenido));
   const number = document.createElement('span');
   number.className = 'numero'; number.textContent = `0${i + 1}`;
   const text = document.createElement('div');
@@ -92,12 +94,15 @@ data.proyectos.forEach((item, i) => {
   text.append(title, description);
   const arrow = document.createElement('span'); arrow.textContent = 'Abrir carpeta ↗'; arrow.setAttribute('aria-hidden', 'true');
   link.append(number, text, arrow);
-  document.querySelector('#lista-proyectos').append(link);
+  document.querySelector(target).append(link);
 });
+}
+renderCarpetas(data.proyectos, '#lista-proyectos', 'Portfolio');
+renderCarpetas(data.mirada, '#lista-mirada', 'Mirada artística');
 document.querySelector('#biografia').textContent = data.biografia;
-data.curiosidades.forEach(text => {
+data.trayectoria.forEach(text => {
   const li = document.createElement('li'); li.textContent = text;
-  document.querySelector('#curiosidades').append(li);
+  document.querySelector('#trayectoria').append(li);
 });
 document.querySelector('#cerrar').addEventListener('click', () => modal.close());
 modal.addEventListener('click', event => { if (event.target === modal) { const r = modal.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) modal.close(); } });

@@ -12,7 +12,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## Modificarla
 
-- `contenido.js`: obras, títulos, datos, descripción, biografía y curiosidades. Los textos iniciales son ejemplos.
+- `contenido.js`: obras, títulos, datos, descripción, biografía, trayectoria y mirada. Los textos iniciales son ejemplos.
 - Guarda fotografías en `imagenes/` y usa, por ejemplo, `imagen: 'imagenes/mi-cuadro.jpg'`. Las imágenes vacías muestran composiciones gráficas de ejemplo.
 - Añade objetos a `obras` para ampliar la galería.
 - Cada obra tiene `categoria: 'paisaje-del-natural'` para paisajes pintados observando directamente el entorno, o `categoria: 'otras-obras'` para el resto. Las carpetas de Obras recientes utilizan ese campo; las obras sin categoría se muestran en Otras obras. Las categorías de las composiciones de ejemplo son demostrativas.
@@ -28,13 +28,13 @@ Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con 
 
 ## Navegación
 
-Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Ilustración y proyectos contiene Revista, Ilustración y bocetos y Otros proyectos. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
+Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Portfolio contiene Revista e Ilustración; Mirada reúne Intereses artísticos, Referentes y Notas de taller. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
 
 ## Portada
 
 El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. Courier New aporta el aspecto de una máquina de escribir al nombre, la portada y todos los títulos de apartados, obras y proyectos; los textos mantienen Montserrat.
 
-La referencia de papelería se refleja en la portada como una carpeta malva con tres pestañas navegables (Pintura, Proyectos y Sobre mí), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
+La referencia de papelería se refleja en la portada como una carpeta malva con tres pestañas navegables (Pintura, Portfolio y Mirada), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
 
 ## Revista y lector de PDF
 
@@ -47,3 +47,12 @@ Para mostrarla automáticamente a todos los visitantes, guarda el PDF autorizado
 `revista.js` carga PDF.js 4.10.38 solo cuando hace falta. La distribución local de `vendor/pdfjs/` se obtuvo de npm y se verificó con su integridad SHA-512; `VERSION.txt` registra la fuente y `LICENSE` su licencia Apache 2.0. Se incluyen mapas de caracteres y fuentes estándar. Para probar el lector es necesario servir la página por HTTP, no abrir el HTML mediante `file://`.
 
 La portada no abre el lector: el inicio está en `index.html`, y la revista se abre únicamente al navegar a `revista.html`.
+
+## Organización de la web
+
+- Pintura: núcleo del portfolio, con óleos y categorías Paisajes del natural y Otras pinturas.
+- Portfolio: ilustración y diseño editorial; la carpeta Revista abre su página de lectura.
+- Trayectoria: biografía y formación; `trayectoria` en `contenido.js` permite añadir exposiciones y residencias cuando se faciliten los datos. Por ahora solo se incluye el ciclo superior de Ilustración, confirmado por Mar.
+- Mirada: intereses artísticos, referentes y notas de taller. Los textos actuales señalan contenidos por incorporar y no atribuyen referentes concretos.
+
+La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina, ahora de ancho completo con celdas de 52 px (40 px en móvil) y más espacio alrededor de la carpeta.
