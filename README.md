@@ -26,7 +26,7 @@ Los cambios se hacen editando archivos; esta primera versión no incluye un pane
 
 ## Tipografía y estética
 
-Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. Las fuentes de pruebas se conservan como archivos y no se cargan. La revista GRX se incluye con su PDF original en `revistas/mar-abril-grx.pdf`, sin recomprimir ni cambiar sus fuentes o imágenes.
+Fondo blanco y tonos rosas. Una textura local de grano fino y fibras suaves (`imagenes/textura-papel.svg`) se repite detrás del contenido y en las fichas, sin superponerse a las obras ni a las páginas de los PDF. La intensidad se ajusta con las opacidades del SVG; para volver al blanco liso, cambia `--textura-papel` a `none` en `styles.css`. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. Las fuentes de pruebas se conservan como archivos y no se cargan. La revista GRX se incluye con su PDF original en `revistas/mar-abril-grx.pdf`, sin recomprimir ni cambiar sus fuentes o imágenes.
 
 ## Navegación
 

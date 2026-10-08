@@ -109,3 +109,8 @@ footer{flex-wrap:wrap}.instagram-contacto{font-size:13px}.instagram-contacto:hov
 }
 
 .pagina-proyecto #album h2,.pagina-proyecto #album>.cabecera .etiqueta{color:var(--rosa)}
+
+/* Papel blanco con grano y fibras suaves, detrás de todo el contenido. */
+:root{--textura-papel:url("imagenes/textura-papel.svg")}
+body{background-color:var(--fondo);background-image:var(--textura-papel);background-repeat:repeat;background-size:256px 256px}
+dialog,.lector-revista{background-image:var(--textura-papel);background-size:256px 256px}
