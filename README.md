@@ -26,7 +26,7 @@ Los cambios se hacen editando archivos; esta primera versión no incluye un pane
 
 ## Tipografía y estética
 
-Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. Las fuentes anteriores se conservan como archivos para posibles pruebas, pero no se cargan en la web. El PDF de la revista no está incluido: se añadirá cuando se disponga de una versión accesible.
+Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. La firma de la cabecera usa Cormorant Garamond; las demás fuentes de pruebas se conservan como archivos y no se cargan. El PDF de la revista no está incluido: se añadirá cuando se disponga de una versión accesible.
 
 ## Navegación
 
@@ -94,6 +94,6 @@ El campo `encuadre` de esta obra define el rectángulo visible de la fotografía
 
 ## Cabecera y contacto
 
-La cabecera muestra una estrella rosa de ocho puntas que enlaza al inicio, en lugar de repetir el nombre de la portada o mostrar una fecha. `sitio.js` actualiza los enlaces de contacto de las dos páginas. El contacto público es `marabrilmartin@gmail.com`, editable en `contenido.js`, y abre el programa de correo mediante `mailto:`. No se envían mensajes automáticamente.
+La cabecera muestra «Mar Abril» en rosa, con Cormorant Garamond en cursiva y una textura de pequeñas puntadas inspirada en la referencia de Mar. La firma enlaza al inicio y mantiene el texto real y seleccionable. Los títulos de la portada y los apartados conservan Courier New. `sitio.js` actualiza los enlaces de contacto de las dos páginas. El contacto público es `marabrilmartin@gmail.com`, editable en `contenido.js`, y abre el programa de correo mediante `mailto:`. No se envían mensajes automáticamente. El bloque de Contacto tiene más espacio, título grande y enlaces rosas de mayor tamaño para destacar correo e Instagram tanto en ordenador como en móvil.
 
 El Instagram facilitado por Mar es `@mareaaada`. Aparece junto al correo en las dos páginas y enlaza a `https://www.instagram.com/mareaaada/` en una pestaña nueva. Se edita mediante el campo `instagram` de `contenido.js`.
