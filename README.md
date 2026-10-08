@@ -30,6 +30,8 @@ Fondo blanco y tonos rosas. Una textura local de grano fino y fibras suaves (`im
 
 ## Navegación
 
+En el inicio, la navegación principal está en las cuatro pestañas de la carpeta: Pintura, Revista, Proyectos y Sobre mí. La cabecera muestra las estrellas y el control de sonido. Las páginas de lectura conservan su menú para moverse por la web.
+
 Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos reúne La Plazuela, La Llorona y Álvaro de Luna, cada uno con su propia carpeta. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción y las imágenes disponibles; La Plazuela incluye la portada de La Caleta.
 
 ## Portada

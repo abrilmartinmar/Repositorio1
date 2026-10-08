@@ -114,3 +114,6 @@ footer{flex-wrap:wrap}.instagram-contacto{font-size:13px}.instagram-contacto:hov
 :root{--textura-papel:url("imagenes/textura-papel.svg")}
 body{background-color:var(--fondo);background-image:var(--textura-papel);background-repeat:repeat;background-size:256px 256px}
 dialog,.lector-revista{background-image:var(--textura-papel);background-size:256px 256px}
+
+/* En el inicio, los apartados se recorren desde las pestañas de la carpeta. */
+header.cabecera-inicio{flex-direction:row;align-items:center}
