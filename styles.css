@@ -107,3 +107,5 @@ footer{flex-wrap:wrap}.instagram-contacto{font-size:13px}.instagram-contacto:hov
   .lector-revista:fullscreen{max-height:100dvh}
   .lector-revista:fullscreen .zona-libro{max-height:calc(100dvh - 280px)}
 }
+
+.pagina-proyecto #album h2,.pagina-proyecto #album>.cabecera .etiqueta{color:var(--rosa)}

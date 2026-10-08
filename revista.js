@@ -1,4 +1,8 @@
 const reader = document.querySelector('#lector-revista');
+const projectId = reader.dataset.proyecto;
+const configured = projectId
+  ? window.portfolio?.proyectos.find(item => item.id === projectId)
+  : window.portfolio?.revista;
 const book = document.querySelector('#libro');
 const scrollArea = document.querySelector('#zona-libro');
 const status = document.querySelector('#estado-revista');
@@ -25,8 +29,11 @@ async function library() {
   }
   return pdfLibrary;
 }
+function singlePage() {
+  return mobile.matches || configured?.paginaUnica;
+}
 function numbers() {
-  if (mobile.matches) return [currentPage];
+  if (singlePage()) return [currentPage];
   if (currentPage === 1) return [null, 1];
   return [currentPage, currentPage + 1 <= documentPdf.numPages ? currentPage + 1 : null];
 }
@@ -117,7 +124,7 @@ async function render(direction = 0) {
   const oldLeaves = [...book.querySelectorAll('.hoja')];
   const oldLeaf = direction > 0 ? oldLeaves.at(-1) : oldLeaves[0];
   try {
-    if (!mobile.matches && currentPage > 1 && currentPage % 2) currentPage--;
+    if (!singlePage() && currentPage > 1 && currentPage % 2) currentPage--;
     const baseWidth = Math.min(960, Math.max(200, scrollArea.clientWidth - 32));
     const width = baseWidth * zoom;
     const shown = numbers();
@@ -145,7 +152,7 @@ async function loadPdf(source, name, href) {
   if (busy) return;
   busy = true;
   updateControls();
-  status.textContent = 'Abriendo la revista…';
+  status.textContent = projectId ? 'Abriendo el álbum…' : 'Abriendo la revista…';
   let task;
   try {
     const lib = await library();
@@ -201,7 +208,7 @@ async function go(direction) {
   if (busy || !documentPdf || (direction > 0 ? next.disabled : previous.disabled)) return;
   document.dispatchEvent(new Event('preparar-sonido'));
   const oldPage = currentPage;
-  currentPage = mobile.matches ? currentPage + direction
+  currentPage = singlePage() ? currentPage + direction
     : direction > 0 ? currentPage === 1 ? 2 : currentPage + 2
       : currentPage <= 2 ? 1 : currentPage - 2;
   try { await render(direction); }
@@ -251,10 +258,14 @@ function queueResize() {
 }
 window.addEventListener('resize', queueResize);
 updateControls();
-const configured = window.portfolio?.revista;
-if (configured?.enlace) {
+if (projectId && configured) {
+  document.querySelector('#titulo-proyecto').textContent = configured.titulo;
+  document.querySelector('#descripcion-proyecto').textContent = configured.contenido;
+}
+const externalLink = projectId ? configured?.enlaceOriginal : configured?.enlace;
+if (externalLink) {
   const external = document.querySelector('#revista-original');
-  external.href = configured.enlace;
+  external.href = externalLink;
   external.hidden = false;
   if (!configured.archivo) {
     status.textContent = 'Puedes abrir la revista original desde el enlace. Su incorporación al visor de páginas está pendiente. También puedes abrir aquí un PDF desde tu dispositivo.';
