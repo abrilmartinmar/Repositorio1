@@ -132,10 +132,16 @@ items.forEach((item, i) => {
   link.className = 'proyecto carpeta-proyecto';
   if (!item.enlace) link.type = 'button';
   if (item.enlace) link.href = item.enlace;
-  else link.addEventListener('click', () => openDetail(item.titulo, context, item.contenido));
+  else link.addEventListener('click', () => openDetail(item.titulo, item.tipo || context, item.contenido));
   const number = document.createElement('span');
   number.className = 'numero'; number.textContent = `0${i + 1}`;
   const text = document.createElement('div');
+  if (item.tipo) {
+    const type = document.createElement('p');
+    type.className = 'tipo-proyecto';
+    type.textContent = item.tipo;
+    text.append(type);
+  }
   const title = document.createElement('h3'); title.textContent = item.titulo;
   const description = document.createElement('p'); description.textContent = item.texto;
   text.append(title, description);

@@ -12,7 +12,9 @@ window.portfolio = {
   ],
   revista: { titulo: 'Mi revista', archivo: '' },
   proyectos: [
-    { titulo: 'Ilustración', texto: 'Una selección de proyectos y dibujos.', contenido: 'Este espacio reunirá mis proyectos de ilustración. Próximamente compartiré las imágenes y la historia de cada pieza.' }
+    { titulo: 'Álbum ilustrado', tipo: 'Proyecto de clase', texto: 'Un álbum ilustrado realizado durante mi formación.', contenido: 'Álbum ilustrado realizado en clase. Próximamente compartiré sus ilustraciones y la historia del proyecto.' },
+    { titulo: 'Portada musical 01', tipo: 'Encargo musical', texto: 'Una portada creada para la canción de un cantante.', contenido: 'Diseño de portada para una canción, realizado por encargo. Próximamente compartiré el nombre del artista, la canción y la imagen de la portada.' },
+    { titulo: 'Portada musical 02', tipo: 'Encargo musical', texto: 'Un segundo trabajo de portada para otro cantante.', contenido: 'Diseño de portada para otro cantante, realizado por encargo. Próximamente compartiré el nombre del artista, la canción y la imagen de la portada.' }
   ],
   correo: 'marabrilmartin@gmail.com',
   instagram: 'mareaaada',
