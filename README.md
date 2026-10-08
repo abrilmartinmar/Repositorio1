@@ -92,8 +92,8 @@ El campo `encuadre` de esta obra define el rectángulo visible de la fotografía
 Óleo sobre madera de 70 × 90 cm, con título, soporte y unidad de medida confirmados por Mar. La descripción sobre la fiesta flamenca se ha reescrito a petición suya, manteniendo la energía nocturna y el caos de la celebración. El archivo HEIF de «Cuadro fiesta recortado.zip» se conserva en `imagenes/originales/me-fui-a-comer-y-acabe-desayunando.heif`. Para los navegadores se decodificó con `heif-convert` a `imagenes/me-fui-a-comer-y-acabe-desayunando.png`, sin reducción de resolución (3325 × 2594), recorte ni retoques. Se incluye en Otras pinturas; no se inventa una fecha.
 
 
-## Fecha y contacto
+## Cabecera y contacto
 
-La cabecera muestra la fecha del día en español (zona Europe/Madrid), en lugar de repetir el nombre de la portada. `sitio.js` actualiza las dos páginas y sus enlaces de correo. El contacto público es `marabrilmartin@gmail.com`, editable en `contenido.js`, y abre el programa de correo mediante `mailto:`. No se envían mensajes automáticamente.
+La cabecera muestra una estrella rosa de ocho puntas que enlaza al inicio, en lugar de repetir el nombre de la portada o mostrar una fecha. `sitio.js` actualiza los enlaces de contacto de las dos páginas. El contacto público es `marabrilmartin@gmail.com`, editable en `contenido.js`, y abre el programa de correo mediante `mailto:`. No se envían mensajes automáticamente.
 
 El Instagram facilitado por Mar es `@mareaaada`. Aparece junto al correo en las dos páginas y enlaza a `https://www.instagram.com/mareaaada/` en una pestaña nueva. Se edita mediante el campo `instagram` de `contenido.js`.
