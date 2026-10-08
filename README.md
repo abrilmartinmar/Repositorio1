@@ -89,7 +89,11 @@ El campo `encuadre` de esta obra define el rectángulo visible de la fotografía
 
 ## Sonidos
 
-`sonidos.js` genera un sonido de tecla con crujidos y textura adhesiva de 0,28 s al activar botones, carpetas y enlaces. El paso de página utiliza un crujido de papel de 0,68 s, también con el teclado o el salto de página. Cuatro variantes y pequeñas variaciones de velocidad evitan una repetición idéntica. La intensidad es mayor que en la versión anterior; un compresor y un limitador suave controlan los picos al pulsar varias veces. El audio se prepara durante el primer contacto táctil, clic o activación con teclado, y se reanuda si el navegador lo suspende o interrumpe. La reproducción se dispara una sola vez en la activación, nunca al cargar la web ni al empezar a deslizar una carpeta. El control «Sonido: sí/no» silencia también los sonidos en curso y recuerda la preferencia. No requiere archivos de audio, servicios externos ni paquetes; si Web Audio o el almacenamiento no están disponibles, la web sigue funcionando. El volumen final depende además del volumen multimedia y de las restricciones de audio del navegador del visitante.
+`sonidos.js` genera una gota resonante con un pequeño estallido de pompa de 0,24 s al activar botones, carpetas y enlaces. El paso de página conserva un crujido de papel de 0,68 s, también con el teclado o el salto de página. Cuatro variantes y pequeñas variaciones de velocidad evitan una repetición idéntica. Un compresor y un limitador suave controlan los picos al pulsar varias veces.
+
+La bienvenida es una melodía original de campanas de 3,2 s, inspirada en los sonidos de inicio de ordenador. Suena al primer toque, clic o activación con Enter/espacio: los navegadores requieren un gesto para permitir el audio. No se activa al cargar la web ni al empezar a deslizar. Se recuerda en `sessionStorage` para sonar una sola vez por pestaña, sin repetirse al entrar en la revista o los proyectos. Si el visitante había silenciado la web, espera hasta que active «Sonido: sí».
+
+El audio se prepara durante el contacto inicial y se reanuda si el navegador lo suspende o interrumpe. Los botones suenan una sola vez por activación. El control «Sonido: sí/no» silencia también los sonidos en curso y recuerda la preferencia. No requiere archivos de audio, servicios externos ni paquetes; si Web Audio o el almacenamiento no están disponibles, la web sigue funcionando. El volumen final depende además del volumen multimedia y de las restricciones de audio del navegador del visitante.
 
 ## Me fui a comer y acabé desayunando
 
