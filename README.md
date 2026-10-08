@@ -4,6 +4,8 @@ Plantilla estática en español, adaptable a móvil y sin dependencias externas.
 
 ## Ver la página
 
+GitHub Pages está configurado para publicar la rama `main` desde `/ (root)` en [abrilmartinmar.github.io/Repositorio1](https://abrilmartinmar.github.io/Repositorio1/). Los cambios subidos a esa rama se publican mediante el proceso de GitHub Pages; comprueba que haya terminado antes de revisar la nueva versión.
+
 Abre `index.html` en tu navegador, o desde esta carpeta ejecuta:
 
 ```sh
@@ -12,7 +14,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## Modificarla
 
-- `contenido.js`: obras, títulos, datos, descripción, biografía, formación, residencias e intereses. Los textos iniciales son ejemplos.
+- `contenido.js`: obras, títulos, datos, descripción, biografía, formación, residencias, intereses, correo e Instagram. Los textos y las obras actuales son los facilitados por Mar.
 - Guarda fotografías en `imagenes/` y usa, por ejemplo, `imagen: 'imagenes/mi-cuadro.jpg'`. Las imágenes vacías muestran composiciones gráficas de ejemplo.
 - Añade objetos a `obras` para ampliar la galería.
 - Cada obra tiene `categoria: 'paisaje-del-natural'` para paisajes pintados observando directamente el entorno, o `categoria: 'otras-obras'` para el resto. Las carpetas de Obras recientes utilizan ese campo; las obras sin categoría se muestran en Otras obras. Las categorías de las composiciones de ejemplo son demostrativas.
