@@ -101,7 +101,7 @@ El Instagram facilitado por Mar es `@mareaaada`. Aparece junto al correo en las 
 
 ## Proyectos desarrollados
 
-Las tres carpetas son «La Plazuela», «La Llorona» y «Álvaro de Luna», en ese orden; La Plazuela ocupa el primer lugar a petición de Mar. El álbum ilustrado se realizó en clase y se inspira en la interpretación de Clarissa Pinkola Estés. Mar participó en las portadas de «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna. En el EP de La Plazuela con David de Jacoba (cinco canciones), su aportación fue pintar el cuadro para la portada; no se le atribuye la autoría íntegra del diseño. Cada carpeta incluye `tipo`, título y descripción editables en `contenido.js`. La carpeta de La Plazuela incorpora el título del EP «La Caleta», la portada y una vista del cuadro original. Las imágenes de los otros proyectos siguen pendientes. La revista mantiene su entrada principal independiente.
+Las tres carpetas son «La Plazuela», «La Llorona» y «Álvaro de Luna», en ese orden; La Plazuela ocupa el primer lugar a petición de Mar. El álbum ilustrado se realizó en clase y se inspira en la interpretación de Clarissa Pinkola Estés. Mar participó en las portadas de «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna. En el EP de La Plazuela con David de Jacoba (cinco canciones), su aportación fue pintar el cuadro para la portada; no se le atribuye la autoría íntegra del diseño. Cada carpeta incluye `tipo`, título y descripción editables en `contenido.js`. La carpeta de La Plazuela incorpora el título del EP «La Caleta», la portada y una vista del cuadro original. La carpeta de Álvaro de Luna incluye las dos portadas recibidas. Las imágenes del álbum ilustrado siguen pendientes. La revista mantiene su entrada principal independiente.
 
 ## Paisajes del natural en Priego de Córdoba
 
@@ -113,6 +113,12 @@ En Sobre mí, «Cursos y residencias» muestra el nombre del curso, Priego de C�
 
 ## Portada de La Caleta
 
-La primera carpeta de Proyectos, La Plazuela, abre la portada del EP «La Caleta», junto al texto de la participación de Mar: pintar el cuadro utilizado en la portada. `imagenes/la-plazuela-la-caleta-portada.webp` conserva la imagen recibida en su ZIP, de 1103 × 1103, sin recortes ni retoques. El enlace al original abre la misma imagen. El visor admite imágenes de proyectos y mantiene la etiqueta «Portada de EP»; las otras carpetas siguen mostrando solo sus textos hasta que se faciliten más imágenes.
+La primera carpeta de Proyectos, La Plazuela, abre la portada del EP «La Caleta», junto al texto de la participación de Mar: pintar el cuadro utilizado en la portada. `imagenes/la-plazuela-la-caleta-portada.webp` conserva la imagen recibida en su ZIP, de 1103 × 1103, sin recortes ni retoques. El enlace al original abre la misma imagen. El visor admite imágenes de proyectos y mantiene la etiqueta «Portada de EP»; Álvaro de Luna también incluye sus dos portadas y La Llorona sigue mostrando su texto hasta que se faciliten las imágenes del álbum.
 
 La ficha de La Plazuela permite alternar entre «Portada del EP» y «Cuadro original». La fotografía de IMG_0014 se conserva en `imagenes/originales/la-caleta-cuadro-original.heic`; `imagenes/la-caleta-cuadro-original.png` es su versión decodificada de 3024 × 4032, sin reducción ni retoques. El campo `encuadre` (x 116, y 690, ancho 2770, alto 2802) oculta mediante CSS el caballete y el fondo exterior, con un pequeño margen interior para evitar que aparezcan los bordes inclinados. El enlace al original sigue abriendo la fotografía completa. `tituloVista` permite nombrar la primera vista del proyecto como «Portada del EP»; las pinturas mantienen «Obra completa».
+
+## Portadas de Álvaro de Luna
+
+La carpeta «Álvaro de Luna» abre «¿Dónde vamos?» y permite cambiar a «Me va a doler» con los botones del visor. Mar identifica la imagen de la cola de sirena como «Me va a doler»; la imagen del puente y las flores corresponde a «¿Dónde vamos?».
+
+`imagenes/alvaro-de-luna-donde-vamos.png` conserva el PNG de mar_azulejoo.zip (1928 × 1935) y `imagenes/alvaro-de-luna-me-va-a-doler.png` conserva el de Mar Abril png.zip (2058 × 2060), sin reducción, recorte ni retoques. El enlace «Ver imagen original» abre el archivo de la vista seleccionada. Los textos mantienen la participación que Mar describió, sin añadir técnicas, fechas ni atribuciones no facilitadas. La Plazuela sigue siendo la primera carpeta de Proyectos.

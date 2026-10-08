@@ -21,7 +21,9 @@ window.portfolio = {
       { titulo: 'Cuadro original', imagen: 'imagenes/la-caleta-cuadro-original.png', alt: 'Cuadro original utilizado en la portada de La Caleta: casas blancas junto al mar, barcas y un cielo azul, con la textura de la pintura visible.', ancho: 3024, alto: 4032, encuadre: { x: 116, y: 690, ancho: 2770, alto: 2802 } }
     ] },
     { titulo: 'La Llorona', tipo: 'Proyecto de clase', texto: 'Álbum ilustrado inspirado en la interpretación de Clarissa Pinkola Estés.', contenido: 'Álbum ilustrado realizado en clase, inspirado en la interpretación de La Llorona de Clarissa Pinkola Estés.' },
-    { titulo: 'Álvaro de Luna', tipo: 'Portadas musicales', texto: '¿Dónde vamos? · Me va a doler', contenido: 'Participé en la realización de las portadas de las canciones «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna.' }
+    { titulo: 'Álvaro de Luna', tipo: 'Portadas musicales', texto: '¿Dónde vamos? · Me va a doler', contenido: 'Participé en la realización de las portadas de las canciones «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna.', imagen: 'imagenes/alvaro-de-luna-donde-vamos.png', tituloVista: '¿Dónde vamos?', alt: 'Ilustración para la portada de ¿Dónde vamos?, con un puente dentro de un círculo y un marco floral en tonos rojos y rosas sobre blanco.', ancho: 1928, alto: 1935, detalles: [
+      { titulo: 'Me va a doler', imagen: 'imagenes/alvaro-de-luna-me-va-a-doler.png', alt: 'Ilustración para la portada de Me va a doler, con una cola de sirena entre las olas, un barco y un marco ornamental en tonos rojos y rosas sobre blanco.', ancho: 2058, alto: 2060 }
+    ] }
   ],
   correo: 'marabrilmartin@gmail.com',
   instagram: 'mareaaada',
