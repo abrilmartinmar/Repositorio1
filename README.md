@@ -30,7 +30,7 @@ Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con 
 
 ## Navegación
 
-Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos reúne La Plazuela, La Llorona y Álvaro de Luna, cada uno con su propia carpeta. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
+Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos reúne La Plazuela, La Llorona y Álvaro de Luna, cada uno con su propia carpeta. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción y las imágenes disponibles; La Plazuela incluye la portada de La Caleta.
 
 ## Portada
 
@@ -105,8 +105,12 @@ Las tres carpetas son «La Plazuela», «La Llorona» y «Álvaro de Luna», en 
 
 ## Paisajes del natural en Priego de Córdoba
 
-Las imágenes de IMG_0258 e IMG_0251 corresponden a una obra y a su detalle; IMG_0255 muestra un segundo paisaje. Mar confirma que ambos fueron pintados del natural durante el XXXIX Curso de Paisaje de Priego de Córdoba. Se muestran en Paisajes del natural, con nombres descriptivos provisionales hasta que facilite los títulos. Técnica, soporte, año y medidas quedan pendientes; no se deducen de las fotografías.
+Las imágenes de IMG_0258 e IMG_0251 corresponden a una obra y a su detalle; IMG_0255 muestra un segundo paisaje. Mar confirma que ambos fueron pintados del natural durante el XXXIX Curso de Paisaje de Priego de Córdoba. Se muestran en Paisajes del natural. A petición de Mar, se proponen los títulos provisionales «La tierra respira» (primer paisaje, óleo sobre madera) y «Luz sobre la sierra» (segundo paisaje, óleo sobre tabla). Las técnicas fueron confirmadas por ella; año y medidas siguen pendientes.
 
 Se conservan los HEIC recibidos en `imagenes/originales/paisaje-priego-*.heic`. Las versiones PNG para el navegador se obtuvieron con `heif-convert`, sin reducir resolución ni retocar: campo 4218 × 4229, detalle 3024 × 4032 y montañas 5191 × 3674. El detalle se abre desde la ficha del primer paisaje.
 
 En Sobre mí, «Cursos y residencias» muestra el nombre del curso, Priego de Córdoba, las entidades mencionadas por Mar (Patronato Municipal Adolfo Lozano Sidro y Escuela Libre de Artes Plásticas de Priego de Córdoba) y la beca que ganó en la Escuela de Arte José Val del Omar de Granada para asistir. No se atribuyen cargos organizativos concretos ni un año sin confirmación.
+
+## Portada de La Caleta
+
+La primera carpeta de Proyectos, La Plazuela, abre la portada del EP «La Caleta», junto al texto de la participación de Mar: pintar el cuadro utilizado en la portada. `imagenes/la-plazuela-la-caleta-portada.webp` conserva la imagen recibida en su ZIP, de 1103 × 1103, sin recortes ni retoques. El enlace al original abre la misma imagen. El visor admite imágenes de proyectos y mantiene la etiqueta «Portada de EP»; las otras carpetas siguen mostrando solo sus textos hasta que se faciliten más imágenes.

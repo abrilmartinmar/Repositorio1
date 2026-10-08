@@ -39,7 +39,7 @@ function artwork(item) {
   return box;
 }
 function openDetail(title, details, description, item) {
-  document.querySelector('#detalle .etiqueta').textContent = item ? 'Óleo / Colección' : details;
+  document.querySelector('#detalle .etiqueta').textContent = item?.categoria ? 'Óleo / Colección' : details;
   document.querySelector('#detalle-titulo').textContent = title;
   document.querySelector('#detalle-datos').textContent = details;
   document.querySelector('#detalle-descripcion').textContent = description;
@@ -132,7 +132,7 @@ items.forEach((item, i) => {
   link.className = 'proyecto carpeta-proyecto';
   if (!item.enlace) link.type = 'button';
   if (item.enlace) link.href = item.enlace;
-  else link.addEventListener('click', () => openDetail(item.titulo, item.tipo || context, item.contenido));
+  else link.addEventListener('click', () => openDetail(item.titulo, item.tipo || context, item.contenido, item.imagen ? item : undefined));
   const number = document.createElement('span');
   number.className = 'numero'; number.textContent = `0${i + 1}`;
   const text = document.createElement('div');
