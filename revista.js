@@ -167,7 +167,7 @@ async function loadPdf(source, name, href) {
     if (old) await old.destroy();
     document.querySelector('#nombre-revista').textContent = name;
     download.href = href;
-    download.download = name;
+    download.download = /\.pdf$/i.test(name) ? name : `${name}.pdf`;
     download.hidden = false;
     status.textContent = `${loaded.numPages} ${loaded.numPages === 1 ? 'página lista' : 'páginas listas'} para leer. ${typeof source === 'string' ? '' : 'El PDF permanece en tu navegador.'}`;
   } catch (error) {
@@ -260,4 +260,7 @@ if (configured?.enlace) {
     status.textContent = 'Puedes abrir la revista original desde el enlace. Su incorporación al visor de páginas está pendiente. También puedes abrir aquí un PDF desde tu dispositivo.';
   }
 }
-if (configured?.archivo) loadPdf(configured.archivo, configured.titulo || 'Revista', configured.archivo);
+if (configured?.archivo) {
+  fileInput.closest('.abrir-pdf').hidden = true;
+  loadPdf(configured.archivo, configured.titulo || 'Revista', configured.archivo);
+}

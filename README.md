@@ -26,7 +26,7 @@ Los cambios se hacen editando archivos; esta primera versión no incluye un pane
 
 ## Tipografía y estética
 
-Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. Las fuentes de pruebas se conservan como archivos y no se cargan. El PDF de la revista no está incluido: se añadirá cuando se disponga de una versión accesible.
+Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. Las fuentes de pruebas se conservan como archivos y no se cargan. La revista GRX se incluye con su PDF original en `revistas/mar-abril-grx.pdf`, sin recomprimir ni cambiar sus fuentes o imágenes.
 
 ## Navegación
 
@@ -42,9 +42,13 @@ La referencia de papelería se refleja en la portada como una carpeta malva con 
 
 La página independiente `revista.html`, accesible desde el menú y su pestaña de portada, ofrece portada, hojas enfrentadas en escritorio, una página en móvil, paso de hojas animado, texto seleccionable, zoom, salto a página, pantalla completa y descarga. Las animaciones respetan la preferencia de movimiento reducido.
 
-Mientras falta el archivo público, **Abrir mi PDF** permite leer una revista desde el ordenador: se procesa en el navegador y no se envía a ningún servidor. Ese archivo no queda publicado ni se conserva al recargar la página.
+El lector abre automáticamente las 24 páginas del PDF original de GRX al entrar en `revista.html`, sin cargarlo en el inicio. El botón «Descargar PDF» permite guardar el mismo archivo completo. «Leer revista original» conserva el acceso a la copia de Google Drive.
 
-Para mostrarla automáticamente a todos los visitantes, guarda el PDF autorizado en el repositorio (por ejemplo `revistas/mar-abril.pdf`) y define `revista.archivo: 'revistas/mar-abril.pdf'` en `contenido.js`. Conserva el texto y las fuentes en el PDF al comprimirlo; reducir las imágenes a 150 ppp suele bastar para una versión de lectura web. El PDF original adjunto supera el límite de transferencia de 32 MiB. Mar ha compartido el original mediante Google Drive: `revista.enlace` muestra un acceso a ese archivo en la página de lectura. Su descarga desde este entorno sigue bloqueada por la política de red (HTTP 403 al conectar con drive.google.com); se han guardado en el borrador de configuración los dominios drive.google.com y drive.usercontent.google.com, conservando la lista previa. Hasta aplicar esa configuración y verificar la descarga, `revista.archivo` permanece vacío: el PDF no se presenta como incorporado al visor de páginas.
+Si se deja vacío `revista.archivo`, se recupera la opción **Abrir mi PDF** para leer un archivo local: no se envía a ningún servidor ni queda publicado. Esa opción se oculta a los visitantes cuando ya hay una revista configurada.
+
+El campo `revista.archivo` en `contenido.js` apunta a `revistas/mar-abril-grx.pdf`; `revista.titulo` es «GRX · Mar Abril». El archivo se descargó directamente del enlace de Google Drive facilitado por Mar una vez disponible el acceso de red. Contiene 24 páginas A4, sin contraseña, y mantiene las fuentes incrustadas (incluida Retrogression) y las imágenes originales. El PDF mide 48.072.135 bytes y su SHA-256 es `d3fe9e3837b1ed597b87cc9139401cbb42a198cda0b12bef7c1dee9f709887f4`. La copia del repositorio se verificó idéntica a la descargada: no se ha recomprimido, rasterizado ni reducido.
+
+El límite de transferencia de adjuntos de 32 MiB no afecta a esta descarga directa. Los dominios `drive.google.com` y `drive.usercontent.google.com` están registrados en la configuración de red y la descarga respondió correctamente. El lector pinta únicamente las hojas que se están viendo y conserva una capa de texto seleccionable.
 
 `revista.js` carga PDF.js 4.10.38 solo cuando hace falta. La distribución local de `vendor/pdfjs/` se obtuvo de npm y se verificó con su integridad SHA-512; `VERSION.txt` registra la fuente y `LICENSE` su licencia Apache 2.0. Se incluyen mapas de caracteres y fuentes estándar. Para probar el lector es necesario servir la página por HTTP, no abrir el HTML mediante `file://`.
 
