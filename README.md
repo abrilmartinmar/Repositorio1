@@ -26,11 +26,11 @@ Los cambios se hacen editando archivos; esta primera versión no incluye un pane
 
 ## Tipografía y estética
 
-Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. La firma de la cabecera usa Cormorant Garamond; las demás fuentes de pruebas se conservan como archivos y no se cargan. El PDF de la revista no está incluido: se añadirá cuando se disponga de una versión accesible.
+Fondo blanco y tonos rosas. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. Las fuentes de pruebas se conservan como archivos y no se cargan. El PDF de la revista no está incluido: se añadirá cuando se disponga de una versión accesible.
 
 ## Navegación
 
-Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos contiene un álbum ilustrado de clase y dos portadas musicales por encargo, cada uno con su propia carpeta. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
+Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos reúne La Plazuela, La Llorona y Álvaro de Luna, cada uno con su propia carpeta. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción hasta que se añadan sus imágenes o enlaces reales.
 
 ## Portada
 
@@ -56,7 +56,7 @@ La web completa funciona como portfolio personal; no hay una sección adicional 
 
 - Pintura: núcleo de la web, con óleos y categorías Paisajes del natural y Otras pinturas.
 - Revista: apartado principal con su página de lectura independiente; se abre desde el menú o la portada.
-- Proyectos: álbum ilustrado y dos portadas musicales por encargo.
+- Proyectos: álbum ilustrado y trabajos de portadas musicales por encargo.
 - Sobre mí: biografía y formación. Los campos `residencias` e `intereses` en `contenido.js` añaden contenido dentro de este apartado; esos bloques solo aparecen cuando tienen datos. Por ahora se muestra únicamente la formación confirmada por Mar. No se incluyen exposiciones ni residencias inventadas.
 
 La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina de ancho completo con celdas de 52 px (40 px en móvil).
@@ -94,11 +94,11 @@ El campo `encuadre` de esta obra define el rectángulo visible de la fotografía
 
 ## Cabecera y contacto
 
-La cabecera muestra «Mar Abril» en rosa, con Cormorant Garamond en cursiva y una textura de pequeñas puntadas inspirada en la referencia de Mar. La firma enlaza al inicio y mantiene el texto real y seleccionable. Los títulos de la portada y los apartados conservan Courier New. `sitio.js` actualiza los enlaces de contacto de las dos páginas. El contacto público es `marabrilmartin@gmail.com`, editable en `contenido.js`, y abre el programa de correo mediante `mailto:`. No se envían mensajes automáticamente. El bloque de Contacto tiene más espacio, título grande y enlaces rosas de mayor tamaño para destacar correo e Instagram tanto en ordenador como en móvil.
+La cabecera muestra tres estrellas rosas de ocho puntas que enlazan al inicio: las laterales miden 42 px y la central 50 px. Los títulos de la portada y los apartados conservan Courier New. `sitio.js` actualiza los enlaces de contacto de las dos páginas. El contacto público es `marabrilmartin@gmail.com`, editable en `contenido.js`, y abre el programa de correo mediante `mailto:`. No se envían mensajes automáticamente. El bloque de Contacto tiene más espacio, título grande y enlaces rosas de mayor tamaño para destacar correo e Instagram tanto en ordenador como en móvil.
 
 El Instagram facilitado por Mar es `@mareaaada`. Aparece junto al correo en las dos páginas y enlaza a `https://www.instagram.com/mareaaada/` en una pestaña nueva. Se edita mediante el campo `instagram` de `contenido.js`.
 
 
 ## Proyectos desarrollados
 
-Las tres carpetas distinguen el álbum ilustrado realizado en clase de las dos portadas encargadas por cantantes diferentes. Cada proyecto incluye `tipo` (Proyecto de clase o Encargo musical), título y descripción editables en `contenido.js`. Los nombres «Álbum ilustrado», «Portada musical 01» y «Portada musical 02» son etiquetas provisionales; faltan títulos, artistas, canciones e imágenes. No se muestran imágenes de ejemplo ni se atribuyen nombres inventados. La revista mantiene su entrada principal independiente.
+Las tres carpetas son «La Plazuela», «La Llorona» y «Álvaro de Luna», en ese orden; La Plazuela ocupa el primer lugar a petición de Mar. El álbum ilustrado se realizó en clase y se inspira en la interpretación de Clarissa Pinkola Estés. Mar participó en las portadas de «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna. En el EP de La Plazuela con David de Jacoba (cinco canciones), su aportación fue pintar el cuadro para la portada; no se le atribuye la autoría íntegra del diseño. Cada carpeta incluye `tipo`, título y descripción editables en `contenido.js`. Las imágenes y el título del EP siguen pendientes. La revista mantiene su entrada principal independiente.

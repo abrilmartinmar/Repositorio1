@@ -12,9 +12,9 @@ window.portfolio = {
   ],
   revista: { titulo: 'Mi revista', archivo: '' },
   proyectos: [
-    { titulo: 'Álbum ilustrado', tipo: 'Proyecto de clase', texto: 'Un álbum ilustrado realizado durante mi formación.', contenido: 'Álbum ilustrado realizado en clase. Próximamente compartiré sus ilustraciones y la historia del proyecto.' },
-    { titulo: 'Portada musical 01', tipo: 'Encargo musical', texto: 'Una portada creada para la canción de un cantante.', contenido: 'Diseño de portada para una canción, realizado por encargo. Próximamente compartiré el nombre del artista, la canción y la imagen de la portada.' },
-    { titulo: 'Portada musical 02', tipo: 'Encargo musical', texto: 'Un segundo trabajo de portada para otro cantante.', contenido: 'Diseño de portada para otro cantante, realizado por encargo. Próximamente compartiré el nombre del artista, la canción y la imagen de la portada.' }
+    { titulo: 'La Plazuela', tipo: 'Portada de EP', texto: 'En colaboración con David de Jacoba. El cuadro para la portada de un EP de cinco canciones.', contenido: 'Participé en la realización de la portada del EP de La Plazuela en colaboración con David de Jacoba, compuesto por cinco canciones. Mi aportación fue pintar el cuadro de la portada.' },
+    { titulo: 'La Llorona', tipo: 'Proyecto de clase', texto: 'Álbum ilustrado inspirado en la interpretación de Clarissa Pinkola Estés.', contenido: 'Álbum ilustrado realizado en clase, inspirado en la interpretación de La Llorona de Clarissa Pinkola Estés.' },
+    { titulo: 'Álvaro de Luna', tipo: 'Portadas musicales', texto: '¿Dónde vamos? · Me va a doler', contenido: 'Participé en la realización de las portadas de las canciones «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna.' }
   ],
   correo: 'marabrilmartin@gmail.com',
   instagram: 'mareaaada',
