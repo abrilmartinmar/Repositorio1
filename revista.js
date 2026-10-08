@@ -252,4 +252,12 @@ function queueResize() {
 window.addEventListener('resize', queueResize);
 updateControls();
 const configured = window.portfolio?.revista;
+if (configured?.enlace) {
+  const external = document.querySelector('#revista-original');
+  external.href = configured.enlace;
+  external.hidden = false;
+  if (!configured.archivo) {
+    status.textContent = 'Puedes abrir la revista original desde el enlace. Su incorporación al visor de páginas está pendiente. También puedes abrir aquí un PDF desde tu dispositivo.';
+  }
+}
 if (configured?.archivo) loadPdf(configured.archivo, configured.titulo || 'Revista', configured.archivo);
