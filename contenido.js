@@ -3,7 +3,7 @@
 window.portfolio = {
   obras: [
     // Títulos provisionales propuestos a petición de Mar; técnicas confirmadas por ella.
-    { titulo: 'La tierra respira', categoria: 'paisaje-del-natural', datos: 'Óleo sobre madera · Priego de Córdoba', imagen: 'imagenes/paisaje-priego-campo.png', alt: 'Paisaje de un campo con árboles verdes, tierra en tonos ocres y rosados y pequeñas zonas de cielo azul.', ancho: 4218, alto: 4229, descripcion: 'Paisaje pintado del natural en un campo de Priego de Córdoba durante el XXXIX Curso de Paisaje.', detalles: [
+    { titulo: 'La tierra respira', categoria: 'paisaje-del-natural', datos: 'Óleo sobre madera · Priego de Córdoba', imagen: 'imagenes/paisaje-priego-campo.png', alt: 'Paisaje de un campo con árboles verdes, tierra en tonos ocres y rosados y pequeñas zonas de cielo azul.', ancho: 4218, alto: 4229, encuadre: { x: 100, y: 45, ancho: 4080, alto: 4065 }, descripcion: 'Paisaje pintado del natural en un campo de Priego de Córdoba durante el XXXIX Curso de Paisaje.', detalles: [
       { titulo: 'Detalle de la pincelada', imagen: 'imagenes/paisaje-priego-campo-detalle.png', alt: 'Detalle de los árboles y el terreno del paisaje de Priego, con la pincelada y la textura del soporte visibles.', ancho: 3024, alto: 4032 }
     ] },
     { titulo: 'Luz sobre la sierra', categoria: 'paisaje-del-natural', datos: 'Óleo sobre tabla · Priego de Córdoba', imagen: 'imagenes/paisaje-priego-montanas.png', alt: 'Montañas en tonos azulados bajo un cielo amarillo y rosado, con un campo oscuro en primer plano.', ancho: 5191, alto: 3674, descripcion: 'Paisaje pintado del natural durante el XXXIX Curso de Paisaje en Priego de Córdoba.' },
