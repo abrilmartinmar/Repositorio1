@@ -17,7 +17,9 @@ window.portfolio = {
   ],
   revista: { titulo: 'Mi revista', archivo: '' },
   proyectos: [
-    { titulo: 'La Plazuela', tipo: 'Portada de EP', texto: 'La Caleta · En colaboración con David de Jacoba. El cuadro para la portada de un EP de cinco canciones.', contenido: 'Participé en la realización de la portada del EP «La Caleta» de La Plazuela en colaboración con David de Jacoba, compuesto por cinco canciones. Mi aportación fue pintar el cuadro de la portada.', imagen: 'imagenes/la-plazuela-la-caleta-portada.webp', alt: 'Portada de La Caleta, con un paisaje pintado de casas blancas junto al mar y elementos gráficos en rojo, azul y blanco.', ancho: 1103, alto: 1103 },
+    { titulo: 'La Plazuela', tipo: 'Portada de EP', texto: 'La Caleta · En colaboración con David de Jacoba. El cuadro para la portada de un EP de cinco canciones.', contenido: 'Participé en la realización de la portada del EP «La Caleta» de La Plazuela en colaboración con David de Jacoba, compuesto por cinco canciones. Mi aportación fue pintar el cuadro de la portada.', imagen: 'imagenes/la-plazuela-la-caleta-portada.webp', tituloVista: 'Portada del EP', alt: 'Portada de La Caleta, con un paisaje pintado de casas blancas junto al mar y elementos gráficos en rojo, azul y blanco.', ancho: 1103, alto: 1103, detalles: [
+      { titulo: 'Cuadro original', imagen: 'imagenes/la-caleta-cuadro-original.png', alt: 'Cuadro original utilizado en la portada de La Caleta: casas blancas junto al mar, barcas y un cielo azul, con la textura de la pintura visible.', ancho: 3024, alto: 4032, encuadre: { x: 116, y: 690, ancho: 2770, alto: 2802 } }
+    ] },
     { titulo: 'La Llorona', tipo: 'Proyecto de clase', texto: 'Álbum ilustrado inspirado en la interpretación de Clarissa Pinkola Estés.', contenido: 'Álbum ilustrado realizado en clase, inspirado en la interpretación de La Llorona de Clarissa Pinkola Estés.' },
     { titulo: 'Álvaro de Luna', tipo: 'Portadas musicales', texto: '¿Dónde vamos? · Me va a doler', contenido: 'Participé en la realización de las portadas de las canciones «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna.' }
   ],

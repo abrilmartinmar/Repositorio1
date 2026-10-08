@@ -58,7 +58,7 @@ function openDetail(title, details, description, item) {
       views.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button === selected)));
     };
     if (item.detalles?.length) {
-      [{ ...item, titulo: 'Obra completa' }, ...item.detalles].forEach((view, index) => {
+      [{ ...item, titulo: item.tituloVista || 'Obra completa' }, ...item.detalles].forEach((view, index) => {
         const button = document.createElement('button');
         button.type = 'button';
         button.textContent = view.titulo;
