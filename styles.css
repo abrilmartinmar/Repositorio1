@@ -61,3 +61,49 @@ footer{flex-wrap:wrap}.instagram-contacto{font-size:13px}.instagram-contacto:hov
 @media(max-width:700px){.contacto{padding-top:50px;padding-bottom:56px}.contacto-cabecera{align-items:flex-start;flex-direction:column;gap:16px;margin-bottom:32px}.contacto-enlaces{grid-template-columns:minmax(0,1fr);gap:34px}.contacto .correo-contacto,.contacto .instagram-contacto{font-size:clamp(20px,5.6vw,28px)}}
 #proyectos .proyectos{grid-template-columns:repeat(3,minmax(0,1fr))}.carpeta-proyecto .tipo-proyecto{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--rosa);margin:0 0 14px}.carpeta-proyecto>span:last-child{margin-top:auto}
 @media(max-width:1000px){#proyectos .proyectos{grid-template-columns:minmax(0,1fr)}}
+
+/* Controles cómodos con el dedo, también en tablets táctiles. */
+@media(pointer:coarse),(max-width:700px){
+  button,.boton-revista,header nav a,.pestanas-portada a,.enlace,.volver-proyectos,.volver-arriba,.correo-contacto,.instagram-contacto{min-height:44px;touch-action:manipulation}
+  .lector-revista button,.vistas-obra button,.sonido-boton{min-width:44px}
+  .enlace,.volver-proyectos,.volver-arriba,.boton-revista{display:inline-flex;align-items:center}
+  .ajustes-revista input{min-height:44px;font-size:16px}
+}
+
+/* Móvil: navegación visible, fichas amplias y lectura sin controles apretados. */
+@media(max-width:700px){
+  header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding-top:20px;padding-bottom:16px}
+  header .estrellas-cabecera{grid-column:1;grid-row:1;justify-self:start}
+  header .sonido-boton{grid-column:2;grid-row:1;justify-self:end}
+  header nav{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 10px;width:100%;font-size:13px}
+  header nav a{display:flex;align-items:center;justify-content:center;padding:8px 4px}
+  .presentacion{padding:88px 8px 60px}
+  .pestanas-portada{height:48px;top:-48px}
+  .pestanas-portada a{font-size:11px;letter-spacing:0}
+  h2{font-size:clamp(28px,8.5vw,36px)}
+  .ficha-obra h3{font-size:clamp(28px,7.5vw,36px);overflow-wrap:break-word}
+  .ficha-obra p{font-size:13px;max-width:none}
+  .biografia{font-size:16px;line-height:1.8}
+  dialog{width:calc(100% - 32px);max-height:90dvh;padding:20px;overscroll-behavior:contain}
+  dialog h2{font-size:clamp(28px,8vw,36px);overflow-wrap:break-word}
+  #cerrar{position:sticky;top:0;z-index:6;background:var(--fondo);padding:8px 12px}
+  body:has(dialog[open]){overflow:hidden}
+  .vistas-obra{gap:8px}
+  .vistas-obra button{padding:10px 12px}
+  .lector-revista button,.boton-revista{font-size:12px;padding:10px 12px}
+  .acciones-revista{width:100%;gap:10px}
+  .acciones-revista>*{justify-content:center}
+  .bienvenida-revista{min-height:320px;padding:24px 18px}
+  .bienvenida-revista h3{font-size:clamp(26px,7vw,32px)}
+  .zona-libro{padding:20px 12px 26px;max-height:70dvh}
+  .pasar-paginas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .pasar-paginas button{white-space:nowrap}
+  #pagina-actual{grid-column:1/-1;grid-row:2;font-size:12px}
+  .ajustes-revista{flex-direction:column;align-items:stretch;gap:16px;font-size:12px}
+  .ajustes-revista label,.zoom-revista{justify-content:space-between}
+  .ajustes-revista input{width:64px}
+  .zoom-revista{gap:12px}
+  .estado-revista,.ayuda-revista{font-size:12px}
+  .lector-revista:fullscreen{max-height:100dvh}
+  .lector-revista:fullscreen .zona-libro{max-height:calc(100dvh - 280px)}
+}
