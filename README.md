@@ -57,7 +57,7 @@ La web completa funciona como portfolio personal; no hay una sección adicional 
 - Pintura: núcleo de la web, con óleos y categorías Paisajes del natural y Otras pinturas.
 - Revista: apartado principal con su página de lectura independiente; se abre desde el menú o la portada.
 - Proyectos: álbum ilustrado y trabajos de portadas musicales por encargo.
-- Sobre mí: biografía y formación. Los campos `residencias` e `intereses` en `contenido.js` añaden contenido dentro de este apartado; esos bloques solo aparecen cuando tienen datos. Por ahora se muestra únicamente la formación confirmada por Mar. No se incluyen exposiciones ni residencias inventadas.
+- Sobre mí: biografía y formación. Los campos `residencias` e `intereses` en `contenido.js` añaden contenido dentro de este apartado; esos bloques solo aparecen cuando tienen datos. Se incluye el XXXIX Curso de Paisaje en Priego de Córdoba y la beca concedida por la Escuela de Arte José Val del Omar de Granada, según los datos aportados por Mar. No se inventan fechas ni exposiciones.
 
 La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina de ancho completo con celdas de 52 px (40 px en móvil).
 
@@ -102,3 +102,11 @@ El Instagram facilitado por Mar es `@mareaaada`. Aparece junto al correo en las 
 ## Proyectos desarrollados
 
 Las tres carpetas son «La Plazuela», «La Llorona» y «Álvaro de Luna», en ese orden; La Plazuela ocupa el primer lugar a petición de Mar. El álbum ilustrado se realizó en clase y se inspira en la interpretación de Clarissa Pinkola Estés. Mar participó en las portadas de «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna. En el EP de La Plazuela con David de Jacoba (cinco canciones), su aportación fue pintar el cuadro para la portada; no se le atribuye la autoría íntegra del diseño. Cada carpeta incluye `tipo`, título y descripción editables en `contenido.js`. Las imágenes y el título del EP siguen pendientes. La revista mantiene su entrada principal independiente.
+
+## Paisajes del natural en Priego de Córdoba
+
+Las imágenes de IMG_0258 e IMG_0251 corresponden a una obra y a su detalle; IMG_0255 muestra un segundo paisaje. Mar confirma que ambos fueron pintados del natural durante el XXXIX Curso de Paisaje de Priego de Córdoba. Se muestran en Paisajes del natural, con nombres descriptivos provisionales hasta que facilite los títulos. Técnica, soporte, año y medidas quedan pendientes; no se deducen de las fotografías.
+
+Se conservan los HEIC recibidos en `imagenes/originales/paisaje-priego-*.heic`. Las versiones PNG para el navegador se obtuvieron con `heif-convert`, sin reducir resolución ni retocar: campo 4218 × 4229, detalle 3024 × 4032 y montañas 5191 × 3674. El detalle se abre desde la ficha del primer paisaje.
+
+En Sobre mí, «Cursos y residencias» muestra el nombre del curso, Priego de Córdoba, las entidades mencionadas por Mar (Patronato Municipal Adolfo Lozano Sidro y Escuela Libre de Artes Plásticas de Priego de Córdoba) y la beca que ganó en la Escuela de Arte José Val del Omar de Granada para asistir. No se atribuyen cargos organizativos concretos ni un año sin confirmación.
