@@ -1,5 +1,22 @@
 const data = window.portfolio;
 const modal = document.querySelector('#detalle');
+const imageViewer = document.querySelector('#detalle-imagen');
+const zoomControls = document.querySelector('#controles-obra');
+const zoomLabel = document.querySelector('#zoom-obra');
+const zoomOut = document.querySelector('#reducir-obra');
+const zoomIn = document.querySelector('#ampliar-obra');
+let imageZoom = 1;
+function setImageZoom(value) {
+  imageZoom = Math.max(1, Math.min(3, value));
+  imageViewer.style.setProperty('--zoom-obra', imageZoom);
+  zoomLabel.textContent = `${Math.round(imageZoom * 100)} %`;
+  zoomOut.disabled = imageZoom === 1;
+  zoomIn.disabled = imageZoom === 3;
+  if (imageZoom === 1) { imageViewer.scrollTop = 0; imageViewer.scrollLeft = 0; }
+}
+zoomOut.addEventListener('click', () => setImageZoom(imageZoom - 0.5));
+zoomIn.addEventListener('click', () => setImageZoom(imageZoom + 0.5));
+document.querySelector('#restablecer-obra').addEventListener('click', () => setImageZoom(1));
 function artwork(item) {
   const box = document.createElement('div');
   box.className = `pintura ${item.estilo || 'arena'}`;
@@ -9,6 +26,7 @@ function artwork(item) {
     img.alt = item.alt || item.titulo;
     img.loading = 'lazy';
     img.decoding = 'async';
+    img.draggable = false;
     if (item.ancho && item.alto) { img.width = item.ancho; img.height = item.alto; }
     box.classList.add('pintura-real');
     if (item.ancho && item.alto) box.style.aspectRatio = `${item.ancho} / ${item.alto}`;
@@ -43,18 +61,22 @@ function openDetail(title, details, description, item) {
   document.querySelector('#detalle-titulo').textContent = title;
   document.querySelector('#detalle-datos').textContent = details;
   document.querySelector('#detalle-descripcion').textContent = description;
-  const image = document.querySelector('#detalle-imagen');
-  image.replaceChildren();
-  const original = document.querySelector('#ver-imagen-original');
+  imageViewer.replaceChildren();
+  zoomControls.hidden = !item?.imagen;
   const views = document.querySelector('#vistas-obra');
   views.replaceChildren();
   views.hidden = !item?.detalles?.length;
-  original.hidden = !item?.imagen;
-  original.removeAttribute('href');
   if (item) {
     const showView = (view, selected) => {
-      image.replaceChildren(artwork(view));
-      original.href = view.imagen;
+      const enlarged = document.createElement('div');
+      enlarged.className = 'ampliacion-obra';
+      enlarged.append(artwork(view));
+      imageViewer.replaceChildren(enlarged);
+      const ratio = view.giro ? view.alto / view.ancho
+        : view.encuadre ? view.encuadre.ancho / view.encuadre.alto
+        : view.ancho / view.alto;
+      imageViewer.style.setProperty('--proporcion', Number.isFinite(ratio) && ratio > 0 ? ratio : 1);
+      setImageZoom(1);
       views.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button === selected)));
     };
     if (item.detalles?.length) {

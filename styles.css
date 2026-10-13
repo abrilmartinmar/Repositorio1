@@ -46,7 +46,7 @@ h1,h2,h3,.nombre-carpeta,.barra-revista>p{font-family:"Courier New",Courier,mono
 .pestanas-portada{grid-template-columns:repeat(4,minmax(0,1fr))}
 
 /* Las obras originales se muestran enteras, conservando su proporción. */
-.obra .pintura-real,dialog .pintura-real{height:auto;max-height:680px;background:none}.pintura-real img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:0!important}dialog .pintura-real{max-height:65vh}#ver-imagen-original:not([hidden]){display:inline-block;margin-top:12px}
+.obra .pintura-real,dialog .pintura-real{height:auto;max-height:680px;background:none}.pintura-real img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:0!important}dialog .pintura-real{max-height:65vh}
 @media(max-width:700px){.obra .pintura-real{height:auto;max-height:none}}
 .vistas-obra:not([hidden]){display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}.vistas-obra button{border:1px solid var(--linea);background:white;padding:8px 12px;font-size:12px}.vistas-obra button[aria-pressed="true"]{border-color:var(--tinta);background:var(--tinta);color:white}.pintura-girada img{inset:auto;left:50%;top:50%}dialog .pintura-girada{width:min(100%,calc(65vh * var(--proporcion)));max-height:none;margin-inline:auto}
 /* Encuadre de la fotografía: el archivo original y sus colores se conservan. */
@@ -117,3 +117,14 @@ dialog,.lector-revista{background-image:var(--textura-papel);background-size:256
 
 /* En el inicio, los apartados se recorren desde las pestañas de la carpeta. */
 header.cabecera-inicio{flex-direction:row;align-items:center}
+
+/* Vista y ampliación de las pinturas dentro de la ficha. */
+#detalle{width:min(1000px,calc(100% - 32px))}
+.controles-obra:not([hidden]){display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.controles-obra button{min-width:44px;min-height:44px;padding:8px 12px;border:1px solid var(--linea);border-radius:4px;background:white;font-size:13px}
+.controles-obra button:disabled{opacity:.4;cursor:default}
+#zoom-obra{min-width:64px;text-align:center;font-size:12px}
+#detalle-imagen{max-height:var(--alto-visor,65dvh);overflow:auto;overscroll-behavior:contain}
+#detalle-imagen .ampliacion-obra{width:min(calc(100% * var(--zoom-obra,1)),calc(var(--alto-visor,65dvh) * var(--proporcion,1) * var(--zoom-obra,1)));margin-inline:auto}
+#detalle-imagen .pintura-real{width:100%;height:auto;max-height:none;margin:0}
+@media(max-width:700px){#detalle-imagen{--alto-visor:60dvh}}

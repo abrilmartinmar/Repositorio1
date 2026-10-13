@@ -101,8 +101,8 @@
       let sample;
       if (paper) {
         const envelope = Math.pow(Math.sin(Math.PI * i / samples.length), 0.9);
-        const folds = 0.65 + 0.2 * Math.sin(t * 72) + 0.15 * Math.sin(t * 139);
-        sample = (0.45 * noise + 1.5 * lowNoise) * envelope * folds;
+        const folds = 0.72 + 0.18 * Math.sin(t * 24) + 0.1 * Math.sin(t * 45);
+        sample = (0.14 * noise + 1.3 * lowNoise) * envelope * folds;
       } else {
         // Descenso de tono resonante: una gota redonda con un pequeño estallido.
         const attack = Math.min(1, t / 0.0015);
@@ -118,7 +118,7 @@
       for (const at of pops) {
         const elapsed = t - at - variant * 0.0015;
         if (elapsed >= 0 && elapsed < 0.015) {
-          sample += (paper ? 0.22 : 0.18) * Math.min(1, elapsed / 0.0006)
+          sample += (paper ? 0.04 : 0.18) * Math.min(1, elapsed / (paper ? 0.003 : 0.0006))
             * Math.exp(-elapsed * 350) * (noise + Math.sin(2 * Math.PI * 950 * elapsed));
         }
       }
@@ -143,9 +143,9 @@
       highpass.type = 'highpass';
       highpass.frequency.value = 65;
       filter.type = 'lowpass';
-      filter.frequency.value = kind === 'pagina' || welcome ? 6800 : 5200;
+      filter.frequency.value = kind === 'pagina' ? 2200 : welcome ? 6800 : 5200;
       filter.Q.value = 0.5;
-      volume.gain.value = welcome ? 0.85 : kind === 'pagina' ? 1.25 : 1.8;
+      volume.gain.value = welcome ? 0.85 : kind === 'pagina' ? 0.22 : 1.8;
       source.connect(highpass).connect(filter).connect(volume).connect(mix);
       source.onended = () => { source.disconnect(); highpass.disconnect(); filter.disconnect(); volume.disconnect(); };
       source.start();

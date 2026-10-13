@@ -71,27 +71,31 @@ Sobre mí muestra el texto de Mar sobre la pintura al óleo, la atmósfera, la l
 
 ## Primera obra recibida
 
-`imagenes/mar-abril-03.png` contiene la imagen original del ZIP Mar Abril-3, sin recorte, reducción ni modificación de píxeles (3177 × 5087). Sustituye las tres obras gráficas de ejemplo. La obra se titula «No te vayas de mi lao» y su técnica es óleo sobre lienzo, según los datos aportados por Mar. Su descripción recoge su investigación del contraluz, la atmósfera y la relación entre figura y luz en una cueva del Sacromonte. Año y medidas siguen pendientes y no se han inventado. Se muestra en Otras pinturas; el detalle permite abrir el original. La imagen se carga de forma diferida para que su tamaño no bloquee la portada.
+`imagenes/mar-abril-03.png` contiene la imagen original del ZIP Mar Abril-3, sin recorte, reducción ni modificación de píxeles (3177 × 5087). Sustituye las tres obras gráficas de ejemplo. La obra se titula «No te vayas de mi lao» y su técnica es óleo sobre lienzo, según los datos aportados por Mar. Su descripción recoge su investigación del contraluz, la atmósfera y la relación entre figura y luz en una cueva del Sacromonte. Año y medidas siguen pendientes y no se han inventado. Se muestra en Otras pinturas; la ficha permite ampliar la imagen dentro de la web. La imagen se carga de forma diferida para que su tamaño no bloquee la portada.
 
 ## Segunda obra recibida
 
-«Mi reflejo» es un óleo sobre lienzo de 61 × 50 cm. Mar describe su origen en una fotografía tomada en la cueva de una amiga en el Sacromonte y su exploración de una textura nacarada en el reflejo. `imagenes/mar-abril-01.png` conserva el original del ZIP Mar Abril (2907 × 3533), sin recorte ni modificación. Se incluye en Otras pinturas con su ficha y acceso al original. No se atribuye un año de realización sin confirmación.
+«Mi reflejo» es un óleo sobre lienzo de 61 × 50 cm. Mar describe su origen en una fotografía tomada en la cueva de una amiga en el Sacromonte y su exploración de una textura nacarada en el reflejo. `imagenes/mar-abril-01.png` conserva el original del ZIP Mar Abril (2907 × 3533), sin recorte ni modificación. Se incluye en Otras pinturas con su ficha y zoom dentro de la web. No se atribuye un año de realización sin confirmación.
 
-Las descripciones de las dos obras conservan literalmente los textos proporcionados por Mar. «Mi reflejo» incluye además «Detalle del rostro» en su ficha: `imagenes/mi-reflejo-detalle.png` conserva el archivo de 6000 × 4000 del ZIP Mar Abril editada julia-3. Se orienta mediante CSS en el visor, sin alterar el archivo. Los botones permiten alternar entre la obra completa y el detalle; el enlace al original corresponde a la vista seleccionada. El detalle se carga solo al seleccionarlo.
+Las descripciones de las dos obras conservan literalmente los textos proporcionados por Mar. «Mi reflejo» incluye además «Detalle del rostro» en su ficha: `imagenes/mi-reflejo-detalle.png` conserva el archivo de 6000 × 4000 del ZIP Mar Abril editada julia-3. Se orienta mediante CSS en el visor, sin alterar el archivo. Los botones permiten alternar entre la obra completa y el detalle, y ampliar cada vista dentro de la web. El detalle se carga solo al seleccionarlo.
 
 ## Sal que te cuente
 
-Óleo sobre lienzo, con el título y la descripción aportados literalmente por Mar. `imagenes/sal-que-te-cuente.png` conserva el original de `_DSC1363-2.zip` (3698 × 5734), sin recorte ni modificación. Se muestra en Otras pinturas, con acceso al archivo original en su ficha. Año y medidas no se incluyen al no haberse facilitado.
+Óleo sobre lienzo, con el título y la descripción aportados literalmente por Mar. `imagenes/sal-que-te-cuente.png` conserva el original de `_DSC1363-2.zip` (3698 × 5734), sin recorte ni modificación. Se muestra en Otras pinturas, con zoom dentro de su ficha. Año y medidas no se incluyen al no haberse facilitado.
 
-El campo `encuadre` de esta obra define el rectángulo visible de la fotografía en píxeles del original: x 24, y 88, ancho 3646, alto 5510. La galería y la ficha ocultan el borde exterior de la foto mediante CSS, respetando las proporciones. El archivo original y el enlace de descarga siguen intactos. El ajuste es reversible desde `contenido.js`.
+El campo `encuadre` de esta obra define el rectángulo visible de la fotografía en píxeles del original: x 24, y 88, ancho 3646, alto 5510. La galería y la ficha ocultan el borde exterior de la foto mediante CSS, respetando las proporciones. El archivo original sigue intacto, sin enlace de descarga en la ficha. El ajuste es reversible desde `contenido.js`.
 
 ## Soledad de verano
 
 Óleo sobre lienzo, con el título y la descripción de Mar sobre La Caleta de Salobreña conservados literalmente. `imagenes/soledad-de-verano.png` contiene el original del nuevo ZIP Mar Abril-3 (3725 × 3725), sin modificaciones; la ruta es distinta de la primera obra recibida, aunque los ZIP compartan nombre. No se inventan año ni medidas. Mar confirma que la pintó a partir de una fotografía, por lo que se incluye en Otras pinturas.
 
+## Ver los cuadros dentro de la web
+
+Las fichas de pinturas y portadas musicales no ofrecen enlaces al archivo original, descargas ni PDF. Muestran la imagen dentro de la página, con zoom de 100 a 300 %, desplazamiento y botón «Vista completa». Al cambiar de vista o de obra, el zoom y el desplazamiento se restablecen. Los encuadres y giros se mantienen al ampliar. Las imágenes originales no se modifican. Eliminar enlaces de descarga no impide que un visitante guarde una imagen visible mediante las funciones del navegador o una captura de pantalla.
+
 ## Sonidos
 
-`sonidos.js` genera una gota resonante con un pequeño estallido de pompa de 0,24 s al activar botones, carpetas y enlaces. El paso de página conserva un crujido de papel de 0,68 s, también con el teclado o el salto de página. Cuatro variantes y pequeñas variaciones de velocidad evitan una repetición idéntica. Un compresor y un limitador suave controlan los picos al pulsar varias veces.
+`sonidos.js` genera una gota resonante con un pequeño estallido de pompa de 0,24 s al activar botones, carpetas y enlaces. El paso de página conserva un roce de papel de 0,68 s, también con el teclado o el salto de página. Su ganancia baja de 1,25 a 0,22; se suavizan los pliegues y chasquidos y se filtran los agudos a 2200 Hz. La revista y La Llorona comparten este sonido más tenue. Cuatro variantes y pequeñas variaciones de velocidad evitan una repetición idéntica. Un compresor y un limitador suave controlan los picos al pulsar varias veces.
 
 La bienvenida es una melodía original de campanas de 3,2 s, inspirada en los sonidos de inicio de ordenador. Suena al primer toque, clic o activación con Enter/espacio: los navegadores requieren un gesto para permitir el audio. No se activa al cargar la web ni al empezar a deslizar. Se recuerda en `sessionStorage` para sonar una sola vez por pestaña, sin repetirse al entrar en la revista o los proyectos. Si el visitante había silenciado la web, espera hasta que active «Sonido: sí».
 
@@ -123,17 +127,17 @@ En Sobre mí, «Cursos y residencias» muestra el nombre del curso, Priego de C�
 
 ## Portada de La Caleta
 
-La primera carpeta de Proyectos, La Plazuela, abre la portada del EP «La Caleta», junto al texto de la participación de Mar: pintar el cuadro utilizado en la portada. `imagenes/la-plazuela-la-caleta-portada.webp` conserva la imagen recibida en su ZIP, de 1103 × 1103, sin recortes ni retoques. El enlace al original abre la misma imagen. El visor admite imágenes de proyectos y mantiene la etiqueta «Portada de EP»; Álvaro de Luna también incluye sus dos portadas y La Llorona abre su álbum ilustrado en una página de lectura propia.
+La primera carpeta de Proyectos, La Plazuela, abre la portada del EP «La Caleta», junto al texto de la participación de Mar: pintar el cuadro utilizado en la portada. `imagenes/la-plazuela-la-caleta-portada.webp` conserva la imagen recibida en su ZIP, de 1103 × 1103, sin recortes ni retoques. La portada se amplía dentro de su ficha. El visor admite imágenes de proyectos y mantiene la etiqueta «Portada de EP»; Álvaro de Luna también incluye sus dos portadas y La Llorona abre su álbum ilustrado en una página de lectura propia.
 
-La ficha de La Plazuela permite alternar entre «Portada del EP» y «Cuadro original». La fotografía de IMG_0014 se conserva en `imagenes/originales/la-caleta-cuadro-original.heic`; `imagenes/la-caleta-cuadro-original.png` es su versión decodificada de 3024 × 4032, sin reducción ni retoques. El campo `encuadre` (x 116, y 690, ancho 2770, alto 2802) oculta mediante CSS el caballete y el fondo exterior, con un pequeño margen interior para evitar que aparezcan los bordes inclinados. El enlace al original sigue abriendo la fotografía completa. `tituloVista` permite nombrar la primera vista del proyecto como «Portada del EP»; las pinturas mantienen «Obra completa».
+La ficha de La Plazuela permite alternar entre «Portada del EP» y «Cuadro original». La fotografía de IMG_0014 se conserva en `imagenes/originales/la-caleta-cuadro-original.heic`; `imagenes/la-caleta-cuadro-original.png` es su versión decodificada de 3024 × 4032, sin reducción ni retoques. El campo `encuadre` (x 116, y 690, ancho 2770, alto 2802) oculta mediante CSS el caballete y el fondo exterior, con un pequeño margen interior para evitar que aparezcan los bordes inclinados. La ficha permite ampliar el encuadre dentro de la web. `tituloVista` permite nombrar la primera vista del proyecto como «Portada del EP»; las pinturas mantienen «Obra completa».
 
 ## Portadas de Álvaro de Luna
 
 La carpeta «Álvaro de Luna» abre «¿Dónde vamos?» y permite cambiar a «Me va a doler» con los botones del visor. Mar identifica la imagen de la cola de sirena como «Me va a doler»; la imagen del puente y las flores corresponde a «¿Dónde vamos?».
 
-`imagenes/alvaro-de-luna-donde-vamos.png` conserva el PNG de mar_azulejoo.zip (1928 × 1935) y `imagenes/alvaro-de-luna-me-va-a-doler.png` conserva el de Mar Abril png.zip (2058 × 2060), sin reducción, recorte ni retoques. El enlace «Ver imagen original» abre el archivo de la vista seleccionada. Los textos mantienen la participación que Mar describió, sin añadir técnicas, fechas ni atribuciones no facilitadas. La Plazuela sigue siendo la primera carpeta de Proyectos.
+`imagenes/alvaro-de-luna-donde-vamos.png` conserva el PNG de mar_azulejoo.zip (1928 × 1935) y `imagenes/alvaro-de-luna-me-va-a-doler.png` conserva el de Mar Abril png.zip (2058 × 2060), sin reducción, recorte ni retoques. El zoom permite ampliar la vista seleccionada dentro de la web. Los textos mantienen la participación que Mar describió, sin añadir técnicas, fechas ni atribuciones no facilitadas. La Plazuela sigue siendo la primera carpeta de Proyectos.
 
-«La tierra respira» se presenta con un encuadre ajustado al interior de la pintura (x 100, y 45, ancho 4080, alto 4065 en el PNG original). El recorte visual se aplica mediante CSS tanto en la galería como en la ficha para ocultar el fondo exterior y los bordes inclinados de la fotografía. La fotografía completa se conserva y sigue accesible en «Ver imagen original». La vista de detalle mantiene su encuadre propio, sin recortes añadidos.
+«La tierra respira» se presenta con un encuadre ajustado al interior de la pintura (x 100, y 45, ancho 4080, alto 4065 en el PNG original). El recorte visual se aplica mediante CSS tanto en la galería como en la ficha para ocultar el fondo exterior y los bordes inclinados de la fotografía. La fotografía completa se conserva como archivo fuente; la ficha presenta únicamente el encuadre dentro de la web. La vista de detalle mantiene su encuadre propio, sin recortes añadidos.
 
 ## Uso desde móvil
 
