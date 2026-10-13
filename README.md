@@ -67,7 +67,7 @@ La web completa funciona como portfolio personal; no hay una sección adicional 
 
 La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina de ancho completo con celdas de 52 px (40 px en móvil).
 
-Sobre mí muestra el texto de Mar sobre la pintura al óleo, la atmósfera, la luz y la materialidad, junto a un párrafo sobre la dimensión social que enlaza a la revista. Los párrafos se editan en `biografia` y `enfoqueSocial` dentro de `contenido.js`. Bachillerato e Integración Social se describen como estudios, sin atribuir títulos completados ni fechas no confirmadas.
+Sobre mí muestra el texto de Mar sobre la pintura al óleo, la atmósfera, la luz y la materialidad, junto a un párrafo sobre la dimensión social que enlaza a la revista. «Materia y experimentación» recoge hacia dónde quiere llevar su pintura: distintas técnicas y soportes, fotografía intervenida sobre lienzo, texturas que evocan el mar y su relación con la luz, y alteración o destrucción parcial del lienzo. Se expresa como una intención de exploración, sin atribuirle obras realizadas con esas técnicas. Los párrafos se editan en `biografia`, `enfoqueSocial` e `intereses` dentro de `contenido.js`. Bachillerato e Integración Social se describen como estudios, sin atribuir títulos completados ni fechas no confirmadas.
 
 ## Primera obra recibida
 

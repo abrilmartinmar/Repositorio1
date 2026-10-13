@@ -35,5 +35,5 @@ Mi trabajo nace de la observación de lugares cotidianos y de la intención de c
   // Añade aquí cursos y residencias; el bloque aparece solo cuando hay datos.
   residencias: ['XXXIX Curso de Paisaje · Priego de Córdoba. Patronato Municipal Adolfo Lozano Sidro · Escuela Libre de Artes Plásticas de Priego de Córdoba. Participé gracias a una beca que gané en la Escuela de Arte José Val del Omar de Granada.'],
   // Texto personal sobre tus intereses; se muestra dentro de Sobre mí al completarlo.
-  intereses: ''
+  intereses: 'Quiero seguir explorando distintas técnicas y soportes dentro del óleo, y abrir mi pintura a otros medios sobre el lienzo, como la fotografía intervenida. Me interesa investigar las texturas que evocan el mar y cómo la luz actúa sobre ellas. También quiero experimentar con la alteración y la destrucción parcial del lienzo, entendiendo su superficie y su estructura como parte de la propia obra.'
 };
