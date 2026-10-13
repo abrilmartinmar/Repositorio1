@@ -98,10 +98,27 @@ const categorias = { 'paisaje-del-natural': 'Paisajes del natural', 'otras-obras
 function categoriaObra(item) {
   return Object.hasOwn(categorias, item.categoria) ? item.categoria : 'otras-obras';
 }
+let primeraObraAnterior;
+function ordenarObras(obras, filtro) {
+  if (filtro === 'paisaje-del-natural' || obras.length < 2) return [...obras];
+  const otras = filtro === 'todas' ? obras.filter(item => categoriaObra(item) !== 'paisaje-del-natural') : obras;
+  const candidatas = otras.length ? otras : obras;
+  const nuevas = candidatas.filter(item => item !== primeraObraAnterior);
+  const opciones = nuevas.length ? nuevas : candidatas;
+  const primera = opciones[Math.floor(Math.random() * opciones.length)];
+  const restantes = [...obras];
+  restantes.splice(restantes.indexOf(primera), 1);
+  for (let i = restantes.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [restantes[i], restantes[j]] = [restantes[j], restantes[i]];
+  }
+  return [primera, ...restantes];
+}
 function mostrarObras(filtro = 'todas') {
 const galeria = document.querySelector('#galeria');
 galeria.replaceChildren();
-const obras = data.obras.filter(item => filtro === 'todas' || categoriaObra(item) === filtro);
+const obras = ordenarObras(data.obras.filter(item => filtro === 'todas' || categoriaObra(item) === filtro), filtro);
+primeraObraAnterior = obras[0];
 obras.forEach((item, index) => {
   const button = document.createElement('button');
   button.className = 'obra';

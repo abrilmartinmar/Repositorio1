@@ -34,6 +34,8 @@ En el inicio, la navegación principal está en las cuatro pestañas de la carpe
 
 Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos reúne La Plazuela, La Llorona y Álvaro de Luna, cada uno con su propia carpeta. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción y las imágenes disponibles; La Plazuela incluye la portada de La Caleta.
 
+Toda la colección muestra todas las obras en orden aleatorio, empezando por una de Otras pinturas para distinguirla de la carpeta de paisajes. Otras pinturas también cambia su orden al abrirla; ambas carpetas evitan repetir la primera obra visible cuando hay otra candidata. Paisajes del natural muestra únicamente sus paisajes en el orden de `contenido.js`. La selección aleatoria cambia la presentación, sin modificar los datos ni los recuentos.
+
 ## Portada
 
 El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. Courier New aporta el aspecto de una máquina de escribir al nombre, la portada y todos los títulos de apartados, obras y proyectos; los textos mantienen Montserrat.
