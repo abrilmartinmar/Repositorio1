@@ -98,6 +98,36 @@ const categorias = { 'paisaje-del-natural': 'Paisajes del natural', 'otras-obras
 function categoriaObra(item) {
   return Object.hasOwn(categorias, item.categoria) ? item.categoria : 'otras-obras';
 }
+function mostrarPortada() {
+  const button = document.querySelector('#obra-portada');
+  const item = data.obras.find(obra => obra.titulo === data.obraPortada && obra.imagen)
+    || data.obras.find(obra => obra.imagen && categoriaObra(obra) === 'otras-obras')
+    || data.obras.find(obra => obra.imagen);
+  if (!button || !item) return;
+  const image = artwork(item);
+  const ratio = Number(image.style.getPropertyValue('--proporcion')) || item.ancho / item.alto;
+  button.style.setProperty('--proporcion-portada', Number.isFinite(ratio) && ratio > 0 ? ratio : 1);
+  const img = image.querySelector('img');
+  img.loading = 'eager';
+  img.fetchPriority = 'high';
+  const caption = document.createElement('span');
+  caption.className = 'ficha-portada';
+  const title = document.createElement('span');
+  title.className = 'titulo-portada';
+  title.textContent = item.titulo;
+  const details = document.createElement('span');
+  details.className = 'datos-portada';
+  details.textContent = item.datos;
+  const action = document.createElement('span');
+  action.className = 'abrir-obra-portada';
+  action.textContent = 'Ver obra +';
+  caption.append(title, details, action);
+  button.replaceChildren(image, caption);
+  button.setAttribute('aria-label', `Ver y ampliar ${item.titulo}`);
+  button.addEventListener('click', () => openDetail(item.titulo, `${categorias[categoriaObra(item)]} · ${item.datos}`, item.descripcion, item));
+  button.hidden = false;
+}
+mostrarPortada();
 let primeraObraAnterior;
 function ordenarObras(obras, filtro) {
   if (filtro === 'paisaje-del-natural' || obras.length < 2) return [...obras];

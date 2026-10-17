@@ -1,6 +1,7 @@
 // Edita este archivo para cambiar las obras, proyectos y textos.
 // Para añadir fotos, guárdalas en imagenes/ y escribe la ruta en "imagen".
 window.portfolio = {
+  obraPortada: 'Mi reflejo',
   obras: [
     // Títulos provisionales propuestos a petición de Mar; técnicas confirmadas por ella.
     { titulo: 'La tierra respira', categoria: 'paisaje-del-natural', datos: 'Óleo sobre madera · Priego de Córdoba', imagen: 'imagenes/paisaje-priego-campo.png', alt: 'Paisaje de un campo con árboles verdes, tierra en tonos ocres y rosados y pequeñas zonas de cielo azul.', ancho: 4218, alto: 4229, encuadre: { x: 100, y: 45, ancho: 4080, alto: 4065 }, descripcion: 'Paisaje pintado del natural en un campo de Priego de Córdoba durante el XXXIX Curso de Paisaje.', detalles: [

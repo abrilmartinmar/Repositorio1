@@ -128,3 +128,53 @@ header.cabecera-inicio{flex-direction:row;align-items:center}
 #detalle-imagen .ampliacion-obra{width:min(calc(100% * var(--zoom-obra,1)),calc(var(--alto-visor,65dvh) * var(--proporcion,1) * var(--zoom-obra,1)));margin-inline:auto}
 #detalle-imagen .pintura-real{width:100%;height:auto;max-height:none;margin:0}
 @media(max-width:700px){#detalle-imagen{--alto-visor:60dvh}}
+
+/* Pestañas claras y una pintura visible desde la portada. */
+.presentacion{padding:96px 24px 64px}
+.portada-carpeta{padding:34px 36px 30px}
+.pestanas-portada{height:64px;top:-64px}
+.pestanas-portada a{flex-direction:column;gap:4px;padding:10px 6px;background-color:#f9f3f7;border-color:#bda5b5;box-shadow:inset 0 -3px 0 #cdbdca;transition:background-color .18s,box-shadow .18s}
+.nombre-pestana{font-family:"Courier New",Courier,monospace;font-size:18px;color:var(--tinta)}
+.accion-pestana{font-size:10px;letter-spacing:.2px;color:#ab245f}
+.accion-pestana>span{margin-left:5px}
+.pestanas-portada a:hover,.pestanas-portada a:focus-visible{background-color:#fff5fa;box-shadow:inset 0 -4px 0 var(--rosa)}
+.contenido-portada{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:36px}
+.portada-carpeta h1{font-size:clamp(36px,5.2vw,64px);line-height:1.15;margin:0 0 16px}
+.texto-portada .introduccion{flex-direction:column;align-items:flex-start;gap:28px}
+.texto-portada .introduccion p{font-size:15px;margin:0;padding:0}
+.portada-carpeta .acceso-coleccion{display:inline-flex;align-items:center;gap:28px;min-height:48px;padding:12px 20px;border:1px solid var(--rosa);background:var(--rosa);color:white;border-radius:3px;font-size:13px}
+.portada-carpeta .acceso-coleccion span{margin:0}
+.portada-carpeta .acceso-coleccion:hover{background:#b92367;border-color:#b92367;color:white}
+.obra-portada{display:block;width:100%;min-width:0;padding:12px 12px 0;border:1px solid #d9cad4;background:#fff;box-shadow:0 7px 20px #58455012;text-align:left;transition:box-shadow .18s,border-color .18s}
+.obra-portada:hover,.obra-portada:focus-visible{border-color:var(--rosa);box-shadow:0 9px 24px #58455025}
+.obra-portada .pintura-real{height:auto;width:min(100%,calc(370px * var(--proporcion-portada,0.823)));max-height:none;margin-inline:auto;background:none}
+.obra-portada .pintura-real img{object-fit:contain}
+.ficha-portada{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 12px;padding:13px 2px 14px}
+.titulo-portada{font-family:"Courier New",Courier,monospace;font-size:18px;line-height:1.3}
+.datos-portada{grid-column:1;font-size:10px;line-height:1.6;color:var(--suave)}
+.abrir-obra-portada{grid-column:2;grid-row:1/3;align-self:center;color:var(--rosa);font-size:11px;white-space:nowrap}
+@media(max-width:850px){
+  .contenido-portada{grid-template-columns:minmax(0,1fr);gap:24px}
+  .texto-portada .introduccion{flex-direction:row;align-items:center;justify-content:space-between;gap:16px}
+  .obra-portada{max-width:440px;justify-self:center}
+  .obra-portada .pintura-real{width:min(100%,calc(320px * var(--proporcion-portada,0.823)))}
+}
+@media(max-width:700px){
+  .presentacion{padding:80px 8px 48px}
+  .portada-carpeta{padding:24px 18px 20px}
+  .pestanas-portada a{padding:8px 1px;border-radius:18px 18px 0 0;gap:4px}
+  .nombre-pestana{font-size:11px;letter-spacing:0}
+  .accion-pestana{font-size:9px;letter-spacing:0}
+  .accion-pestana>span{margin-left:2px}
+  .portada-carpeta h1{font-size:clamp(30px,8.5vw,46px);margin-bottom:10px}
+  .texto-portada .introduccion p{font-size:12px}
+  .portada-carpeta .acceso-coleccion{padding:10px 12px;gap:12px;font-size:11px;min-height:44px}
+  .contenido-portada{gap:22px}
+  .obra-portada{padding:9px 9px 0}
+  .obra-portada .pintura-real{width:min(100%,calc(280px * var(--proporcion-portada,0.823)))}
+  .ficha-portada{gap:3px 8px;padding:12px 0}
+  .titulo-portada{font-size:16px}
+  .datos-portada{font-size:9px}
+  .abrir-obra-portada{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){.pestanas-portada a,.obra-portada{transition:none}}

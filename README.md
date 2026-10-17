@@ -30,7 +30,7 @@ Fondo blanco y tonos rosas. Una textura local de grano fino y fibras suaves (`im
 
 ## Navegación
 
-En el inicio, la navegación principal está en las cuatro pestañas de la carpeta: Pintura, Revista, Proyectos y Sobre mí. La cabecera muestra las estrellas y el control de sonido. Las páginas de lectura conservan su menú para moverse por la web.
+En el inicio, la navegación principal está en las cuatro pestañas de la carpeta: Pintura, Revista, Proyectos y Sobre mí. Cada pestaña indica «Abrir ↗» y tiene estados de foco y hover más visibles. La cabecera muestra las estrellas y el control de sonido. Las páginas de lectura conservan su menú para moverse por la web.
 
 Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos reúne La Plazuela, La Llorona y Álvaro de Luna, cada uno con su propia carpeta. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción y las imágenes disponibles; La Plazuela incluye la portada de La Caleta.
 
@@ -38,7 +38,7 @@ Toda la colección muestra todas las obras en orden aleatorio, empezando por una
 
 ## Portada
 
-El inicio contiene solo el nombre, las disciplinas y el acceso a las obras, con una cuadrícula rosa suave sobre blanco. Courier New aporta el aspecto de una máquina de escribir al nombre, la portada y todos los títulos de apartados, obras y proyectos; los textos mantienen Montserrat.
+El inicio muestra el nombre, «Pintura al óleo», un botón rosa «Ver cuadros» y una obra destacada completa, con una cuadrícula suave sobre el papel blanco. Se ha elegido «Mi reflejo»; `obraPortada` en `contenido.js` permite cambiarla por el título de otra obra. La imagen usa el archivo original, se carga con prioridad y abre la ficha con zoom y detalles dentro de la web, sin enlaces de descarga. El título y los datos de la portada se toman de la misma ficha. En móvil, el cuadro aparece debajo del nombre y el acceso a la colección. Courier New aporta el aspecto de una máquina de escribir al nombre, la portada y todos los títulos de apartados, obras y proyectos; los textos mantienen Montserrat.
 
 La referencia de papelería se refleja en la portada como una carpeta malva con cuatro pestañas navegables (Pintura, Revista, Proyectos y Sobre mí), sobre la cuadrícula. Las carpetas de contenido incorporan textura de papel generada en CSS/SVG, sin copiar el texto ni las imágenes del ejemplo.
 
