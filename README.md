@@ -24,6 +24,30 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Los cambios se hacen editando archivos; esta primera versión no incluye un panel de administración. No requiere cuentas, claves ni instalación de paquetes.
 
+## Google y dominio propio
+
+Las dos páginas incluyen títulos y descripciones específicos, dirección canónica, datos estructurados de Mar Abril y una imagen ligera de presentación para compartir enlaces. La biografía está incluida también en el HTML inicial. `sitemap.xml` reúne el inicio, la revista y los dos documentos distintos; no incluye copias duplicadas del portfolio ni direcciones de fichas con parámetros.
+
+Al actualizar la biografía o los datos personales de `contenido.js`, sincroniza la información para buscadores:
+
+```sh
+node scripts/preparar_busqueda.cjs
+```
+
+Esto prepara la web, pero no verifica su propiedad en Google ni garantiza su aparición o posición en los resultados. Para solicitar la indexación, la propietaria debe abrir [Google Search Console](https://search.google.com/search-console/), añadir la propiedad de prefijo de URL `https://abrilmartinmar.github.io/Repositorio1/` y verificarla con el archivo HTML o la etiqueta HTML que facilite Google. El archivo público de verificación debe quedar en la raíz del repositorio, o la etiqueta dentro del `<head>` de `index.html`; el generador conserva etiquetas añadidas fuera de su bloque. Después se envía `https://abrilmartinmar.github.io/Repositorio1/sitemap.xml` y se solicita la indexación del inicio mediante Inspección de URLs. No se necesita compartir contraseñas. No hay `robots.txt` en este proyecto: en GitHub Pages bajo `/Repositorio1/`, los buscadores consultan ese archivo en la raíz del hostname, fuera de este repositorio.
+
+Mar ha elegido como opción `marabril.com`; su disponibilidad y compra están pendientes de comprobar en un registrador. El dominio tiene renovación anual y es independiente de la indexación gratuita en Google. No se ha configurado un dominio sin registrar: la web conserva su dirección actual.
+
+Una vez registrado el dominio en la cuenta de Mar, primero se verifica su propiedad en GitHub Pages con el registro TXT que indique GitHub. Después se configura en Settings → Pages del repositorio y en el DNS del registrador siguiendo la [documentación oficial de GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site). Para el dominio raíz se usan los registros A/AAAA o ALIAS/ANAME indicados allí; para `www`, un CNAME a `abrilmartinmar.github.io` (sin `/Repositorio1/`). Hay que comprobar la resolución, el certificado y HTTPS antes de darlo por conectado. No crear un CNAME en este repositorio antes de verificar la propiedad y preparar el DNS.
+
+Cuando la nueva dirección funcione, se actualizan las direcciones canónicas y el sitemap, por ejemplo:
+
+```sh
+node scripts/preparar_busqueda.cjs https://marabril.com/
+```
+
+Ese comando solo cambia la información de buscadores; no registra ni conecta el dominio. También habrá que actualizar los enlaces públicos usados por el generador de PDF, regenerar los documentos y actualizar Instagram. En Search Console se verifica entonces el nuevo dominio mediante DNS, se envía su sitemap y, si ya se había indexado la dirección anterior, se tramita el cambio de dirección cuando proceda. La indexación puede tardar y depende de Google.
+
 ## Tipografía y estética
 
 Fondo blanco y tonos rosas. Una textura local de grano fino y fibras suaves (`imagenes/textura-papel.svg`) se repite detrás del contenido y en las fichas, sin superponerse a las obras ni a las páginas de los PDF. La intensidad se ajusta con las opacidades del SVG; para volver al blanco liso, cambia `--textura-papel` a `none` en `styles.css`. Montserrat se sirve localmente desde `fuentes/` con su licencia OFL. Todos los títulos y nombres de carpetas utilizan Courier New, con Courier y monospace como alternativas del sistema. Los textos y la navegación mantienen Montserrat. Las fuentes de pruebas se conservan como archivos y no se cargan. La revista GRX se incluye con su PDF original en `revistas/mar-abril-grx.pdf`, sin recomprimir ni cambiar sus fuentes o imágenes.

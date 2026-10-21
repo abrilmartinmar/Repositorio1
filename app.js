@@ -220,6 +220,7 @@ items.forEach((item, i) => {
 });
 }
 renderCarpetas(data.proyectos, '#lista-proyectos', 'Proyectos');
+document.querySelector('#biografia').replaceChildren();
 data.biografia.split(/\n\s*\n/).forEach(text => {
   const paragraph = document.createElement('p');
   paragraph.className = 'biografia';
