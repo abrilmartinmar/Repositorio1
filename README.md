@@ -32,7 +32,7 @@ Fondo blanco y tonos rosas. Una textura local de grano fino y fibras suaves (`im
 
 En el inicio, la navegación principal está en las cuatro pestañas de la carpeta: Pintura, Revista, Proyectos y Sobre mí. Cada pestaña indica «Abrir ↗» y tiene estados de foco y hover más visibles. La cabecera muestra las estrellas y el control de sonido. Las páginas de lectura conservan su menú para moverse por la web.
 
-Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos reúne La Plazuela, La Llorona y Álvaro de Luna, cada uno con su propia carpeta. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción y las imágenes disponibles; La Plazuela incluye la portada de La Caleta.
+Pintura al óleo contiene las carpetas Toda la colección, Paisajes del natural y Otras pinturas, con descripciones y recuentos. Revista tiene una sección principal independiente; Proyectos reúne La Plazuela y Álvaro de Luna, cada uno con su propia carpeta. Sobre mí reúne biografía, formación, residencias e intereses cuando se facilitan datos. Las carpetas de proyectos muestran su descripción y las imágenes disponibles; La Plazuela incluye la portada de La Caleta.
 
 Toda la colección muestra todas las obras en orden aleatorio, empezando por una de Otras pinturas para distinguirla de la carpeta de paisajes. Otras pinturas también cambia su orden al abrirla; ambas carpetas evitan repetir la primera obra visible cuando hay otra candidata. Paisajes del natural muestra únicamente sus paisajes en el orden de `contenido.js`. La selección aleatoria cambia la presentación, sin modificar los datos ni los recuentos.
 
@@ -64,7 +64,7 @@ La web completa funciona como portfolio personal; no hay una sección adicional 
 
 - Pintura: núcleo de la web, con óleos y categorías Paisajes del natural y Otras pinturas.
 - Revista: apartado principal con su página de lectura independiente; se abre desde el menú o la portada.
-- Proyectos: álbum ilustrado y trabajos de portadas musicales por encargo.
+- Proyectos: trabajos de portadas musicales por encargo.
 - Sobre mí: biografía y formación. Los campos `residencias` e `intereses` en `contenido.js` añaden contenido dentro de este apartado; esos bloques solo aparecen cuando tienen datos. Se incluye el XXXIX Curso de Paisaje en Priego de Córdoba y la beca concedida por la Escuela de Arte José Val del Omar de Granada, según los datos aportados por Mar. No se inventan fechas ni exposiciones.
 
 La portada prioriza «Pintura al óleo» y mantiene la cuadrícula fina de ancho completo con celdas de 52 px (40 px en móvil).
@@ -97,7 +97,7 @@ Las fichas de pinturas y portadas musicales no ofrecen enlaces al archivo origin
 
 ## Sonidos
 
-`sonidos.js` genera una gota resonante con un pequeño estallido de pompa de 0,24 s al activar botones, carpetas y enlaces. El paso de página conserva un roce de papel de 0,68 s, también con el teclado o el salto de página. Su ganancia baja de 1,25 a 0,22; se suavizan los pliegues y chasquidos y se filtran los agudos a 2200 Hz. La revista y La Llorona comparten este sonido más tenue. Cuatro variantes y pequeñas variaciones de velocidad evitan una repetición idéntica. Un compresor y un limitador suave controlan los picos al pulsar varias veces.
+`sonidos.js` genera una gota resonante con un pequeño estallido de pompa de 0,24 s al activar botones, carpetas y enlaces. El paso de página conserva un roce de papel de 0,68 s, también con el teclado o el salto de página. Su ganancia baja de 1,25 a 0,22; se suavizan los pliegues y chasquidos y se filtran los agudos a 2200 Hz. El lector de la revista utiliza este sonido más tenue. Cuatro variantes y pequeñas variaciones de velocidad evitan una repetición idéntica. Un compresor y un limitador suave controlan los picos al pulsar varias veces.
 
 La bienvenida es una melodía original de campanas de 3,2 s, inspirada en los sonidos de inicio de ordenador. Suena al primer toque, clic o activación con Enter/espacio: los navegadores requieren un gesto para permitir el audio. No se activa al cargar la web ni al empezar a deslizar. Se recuerda en `sessionStorage` para sonar una sola vez por pestaña, sin repetirse al entrar en la revista o los proyectos. Si el visitante había silenciado la web, espera hasta que active «Sonido: sí».
 
@@ -117,7 +117,7 @@ El Instagram facilitado por Mar es `@mareaaada`. Aparece junto al correo en las 
 
 ## Proyectos desarrollados
 
-Las tres carpetas son «La Plazuela», «La Llorona» y «Álvaro de Luna», en ese orden; La Plazuela ocupa el primer lugar a petición de Mar. El álbum ilustrado se realizó en clase y se inspira en la interpretación de Clarissa Pinkola Estés. Mar participó en las portadas de «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna. En el EP de La Plazuela con David de Jacoba (cinco canciones), su aportación fue pintar el cuadro para la portada; no se le atribuye la autoría íntegra del diseño. Cada carpeta incluye `tipo`, título y descripción editables en `contenido.js`. La carpeta de La Plazuela incorpora el título del EP «La Caleta», la portada y una vista del cuadro original. La carpeta de Álvaro de Luna incluye las dos portadas recibidas. La Llorona abre una página de lectura con el álbum original de 16 páginas. La revista mantiene su entrada principal independiente.
+Las dos carpetas son «La Plazuela» y «Álvaro de Luna», en ese orden; La Plazuela ocupa el primer lugar a petición de Mar. Mar participó en las portadas de «¿Dónde vamos?» y «Me va a doler», de Álvaro de Luna. En el EP de La Plazuela con David de Jacoba (cinco canciones), su aportación fue pintar el cuadro para la portada; no se le atribuye la autoría íntegra del diseño. Cada carpeta incluye `tipo`, título y descripción editables en `contenido.js`. La carpeta de La Plazuela incorpora el título del EP «La Caleta», la portada y una vista del cuadro original. La carpeta de Álvaro de Luna incluye las dos portadas recibidas. La revista mantiene su entrada principal independiente.
 
 ## Paisajes del natural en Priego de Córdoba
 
@@ -129,7 +129,7 @@ En Sobre mí, «Cursos y residencias» muestra el nombre del curso, Priego de C�
 
 ## Portada de La Caleta
 
-La primera carpeta de Proyectos, La Plazuela, abre la portada del EP «La Caleta», junto al texto de la participación de Mar: pintar el cuadro utilizado en la portada. `imagenes/la-plazuela-la-caleta-portada.webp` conserva la imagen recibida en su ZIP, de 1103 × 1103, sin recortes ni retoques. La portada se amplía dentro de su ficha. El visor admite imágenes de proyectos y mantiene la etiqueta «Portada de EP»; Álvaro de Luna también incluye sus dos portadas y La Llorona abre su álbum ilustrado en una página de lectura propia.
+La primera carpeta de Proyectos, La Plazuela, abre la portada del EP «La Caleta», junto al texto de la participación de Mar: pintar el cuadro utilizado en la portada. `imagenes/la-plazuela-la-caleta-portada.webp` conserva la imagen recibida en su ZIP, de 1103 × 1103, sin recortes ni retoques. La portada se amplía dentro de su ficha. El visor admite imágenes de proyectos y mantiene la etiqueta «Portada de EP»; Álvaro de Luna también incluye sus dos portadas.
 
 La ficha de La Plazuela permite alternar entre «Portada del EP» y «Cuadro original». La fotografía de IMG_0014 se conserva en `imagenes/originales/la-caleta-cuadro-original.heic`; `imagenes/la-caleta-cuadro-original.png` es su versión decodificada de 3024 × 4032, sin reducción ni retoques. El campo `encuadre` (x 116, y 690, ancho 2770, alto 2802) oculta mediante CSS el caballete y el fondo exterior, con un pequeño margen interior para evitar que aparezcan los bordes inclinados. La ficha permite ampliar el encuadre dentro de la web. `tituloVista` permite nombrar la primera vista del proyecto como «Portada del EP»; las pinturas mantienen «Obra completa».
 
@@ -147,12 +147,21 @@ La página principal y el lector incluyen `viewport` y estilos adaptables. En pa
 
 Las fichas dejan márgenes laterales de 16 px, usan la altura visible del navegador (`dvh`) y mantienen «Cerrar» accesible al desplazarse por su contenido. El lector conserva una página por vista en móvil; las flechas, el salto de página y el zoom se distribuyen en filas separadas. El campo de página usa texto de 16 px para evitar la ampliación automática al enfocarlo en iOS. Se mantiene el zoom nativo del navegador. Los cambios se verifican con emulación de pantallas táctiles y tamaños de móvil, tablet y escritorio; no se afirma una prueba en un teléfono físico.
 
-## Álbum ilustrado La Llorona
-
-La segunda carpeta de Proyectos abre `la-llorona.html`, sin añadir otro apartado al menú principal. El texto conserva la descripción de Mar sobre el proyecto de clase y la interpretación de Clarissa Pinkola Estés. `proyectos/la-llorona.pdf` contiene el PDF original recibido mediante Google Drive: 16 páginas horizontales, 55.684.300 bytes, sin contraseña. Su SHA-256 es `a20cc2b79590dd50940023e21cacee66b2c623826f7f6e2888dcfc9efbd3a71a`; la copia se ha verificado idéntica a la descargada, sin recomprimir, retocar ni reducir las imágenes o las fuentes.
-
-El proyecto en `contenido.js` define `id`, `enlace` a su página, `archivo`, `enlaceOriginal` a Drive y `paginaUnica: true`. La página reutiliza `revista.js` y los estilos del lector; `data-proyecto` elige sus datos. Se muestra una página horizontal cada vez también en ordenador, con paso de páginas, zoom, texto seleccionable cuando existe, pantalla completa y descarga del original. La revista GRX conserva las hojas enfrentadas en ordenador y una hoja en móvil. Los PDF se cargan al entrar en sus páginas de lectura, sin descargarlos en Inicio.
-
 ## No infinito · IMG_0338
 
 El nuevo cuadro se incorpora a Paisajes del natural, según la confirmación de Mar de que lo pintó en el campo, en Priego de Córdoba. El título «No infinito» y las medidas de 60 × 50 cm son los facilitados por Mar; no se atribuyen técnica, soporte, año ni pertenencia a un curso sin confirmación. La fotografía HEIC de IMG_0338.zip se conserva en `imagenes/originales/paisaje-priego-campo-0338.heic`; `imagenes/paisaje-priego-campo-0338.png` se obtiene con `heif-convert` a resolución completa (5712 × 4284), sin retoques ni reducción. El encuadre CSS (x 590, y 110, ancho 4750, alto 4010) muestra únicamente el interior del cuadro, ocultando la pared y los bordes exteriores de la fotografía tanto en la galería como en el visor con zoom. El archivo fuente permanece intacto y la ficha no ofrece enlaces de descarga.
+
+## Dossier y portfolio en PDF
+
+`documentos/mar-abril-dossier-portfolio.pdf` reúne presentación, formación y contexto, las ocho pinturas, un detalle de «Mi reflejo», la revista GRX y las portadas musicales. `documentos/mar-abril-portfolio-visual.pdf` ofrece una lectura más visual de las mismas obras y proyectos. Los dos incluyen índice pulsable, marcadores, navegación entre páginas, enlaces a correo, Instagram y web, y un código QR. La revista aparece con su portada y, en el dossier completo, dos páginas interiores; el enlace permite leer sus 24 páginas en la web. No se atribuyen fechas, exposiciones, materiales o medidas no facilitados por Mar.
+
+El apartado Contacto permite abrir ambos documentos. Las fichas de cuadros siguen mostrando las imágenes con zoom, sin ofrecer descargas individuales. Los enlaces `?obra=TÍTULO#obras` abren directamente la ficha correspondiente, por ejemplo `?obra=Mi%20reflejo#obras`. Un título desconocido deja la página normal.
+
+Para regenerar los documentos desde los textos e imágenes de `contenido.js`:
+
+```sh
+python -m pip install -r scripts/requirements-documentos.txt
+python scripts/generar_documentos.py
+```
+
+El generador utiliza Montserrat incrustada y Courier para los títulos. Aplica los mismos encuadres y giros de la web mediante ventanas del PDF. Optimiza las imágenes de la copia de lectura, sin modificar los originales ni el PDF de GRX; el texto y los enlaces siguen siendo seleccionables y pulsables. Los PDF son documentos generales del trabajo de Mar para acompañar una propuesta de proyecto independiente.

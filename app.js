@@ -248,3 +248,10 @@ if (data.intereses.trim()) {
 }
 document.querySelector('#cerrar').addEventListener('click', () => modal.close());
 modal.addEventListener('click', event => { if (event.target === modal) { const r = modal.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) modal.close(); } });
+
+// Los enlaces del dossier abren directamente la obra dentro de la web.
+const requestedArtwork = new URLSearchParams(window.location.search).get('obra');
+if (requestedArtwork) {
+  const item = data.obras.find(obra => obra.titulo === requestedArtwork);
+  if (item) openDetail(item.titulo, `${categorias[categoriaObra(item)]} · ${item.datos}`, item.descripcion, item);
+}
