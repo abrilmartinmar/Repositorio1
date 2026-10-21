@@ -157,6 +157,8 @@ El nuevo cuadro se incorpora a Paisajes del natural, según la confirmación de 
 
 El apartado Contacto permite abrir ambos documentos. Las fichas de cuadros siguen mostrando las imágenes con zoom, sin ofrecer descargas individuales. Los enlaces `?obra=TÍTULO#obras` abren directamente la ficha correspondiente, por ejemplo `?obra=Mi%20reflejo#obras`. Un título desconocido deja la página normal.
 
+La copia `documentos/Mar Abril dossier.pdf` contiene el portfolio visual de 14 páginas con el nombre de archivo y el título interno «Mar Abril dossier», solicitados para compartirlo como documento. Conserva el contenido, el índice y los enlaces del portfolio; el generador también renueva esta copia.
+
 Para regenerar los documentos desde los textos e imágenes de `contenido.js`:
 
 ```sh

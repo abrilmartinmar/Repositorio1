@@ -413,6 +413,12 @@ def main():
         directory = Path(work)
         fonts(directory)
         manifests = [Document(data, visual, directory).build() for visual in (False, True)]
+    # Nombre de archivo y título solicitados para enviar el portfolio como documento.
+    with fitz.open(OUT / 'mar-abril-portfolio-visual.pdf') as pdf:
+        metadata = pdf.metadata
+        metadata['title'] = 'Mar Abril dossier'
+        pdf.set_metadata(metadata)
+        pdf.save(OUT / 'Mar Abril dossier.pdf', garbage=4, deflate=True, use_objstms=1)
     # Registro de comprobación fuera del contenido publicado, para revisar enlaces y páginas.
     check = Path('/workspace/outputs')
     if check.is_dir():
