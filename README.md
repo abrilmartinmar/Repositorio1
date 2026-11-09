@@ -177,6 +177,14 @@ El nuevo cuadro se incorpora a Paisajes del natural, según la confirmación de 
 
 ## Dossier y portfolio en PDF
 
+`documentos/Mar Abril portfolio.pdf` es la versión estática en formato catálogo, preparada para enviar: 16 páginas con presentación, ocho pinturas con sus textos, dos páginas dedicadas a GRX, La Caleta, las dos portadas de Álvaro de Luna y contacto. La lectura sigue un orden fijo, sin índice, botones, QR ni enlaces sobre las obras. Solo conserva enlaces discretos a la revista completa y a los datos de contacto. Las fotografías mantienen los mismos encuadres de la web y el PDF original de la revista se incorpora sin rasterizar su texto. No sustituye la web ni los documentos anteriores.
+
+Para regenerar esta versión usando las mismas dependencias de los documentos:
+
+```sh
+python scripts/generar_portfolio_catalogo.py
+```
+
 `documentos/mar-abril-dossier-portfolio.pdf` reúne presentación, formación y contexto, las ocho pinturas, un detalle de «Mi reflejo», la revista GRX y las portadas musicales. `documentos/mar-abril-portfolio-visual.pdf` ofrece una lectura más visual de las mismas obras y proyectos. Los dos incluyen índice pulsable, marcadores, navegación entre páginas, enlaces a correo, Instagram y web, y un código QR. La revista aparece con su portada y, en el dossier completo, dos páginas interiores; el enlace permite leer sus 24 páginas en la web. No se atribuyen fechas, exposiciones, materiales o medidas no facilitados por Mar.
 
 El apartado Contacto permite abrir ambos documentos. Las fichas de cuadros siguen mostrando las imágenes con zoom, sin ofrecer descargas individuales. Los enlaces `?obra=TÍTULO#obras` abren directamente la ficha correspondiente, por ejemplo `?obra=Mi%20reflejo#obras`. Un título desconocido deja la página normal.
