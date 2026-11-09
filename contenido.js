@@ -30,6 +30,15 @@ window.portfolio = {
       { titulo: 'Me va a doler', imagen: 'imagenes/alvaro-de-luna-me-va-a-doler.png', alt: 'Ilustración para la portada de Me va a doler, con una cola de sirena entre las olas, un barco y un marco ornamental en tonos rojos y rosas sobre blanco.', ancho: 2058, alto: 2060 }
     ] }
   ],
+  taller: {
+    titulo: 'Clases de pintura y sesiones con modelo',
+    ubicacion: 'Centro de Granada',
+    descripcion: 'Doy clases de pintura en mi espacio en el centro de Granada. También lo abro para sesiones con modelo.',
+    fotografias: [
+      { titulo: 'Clases de pintura', imagen: 'imagenes/clases-pintura-granada.jpg', ancho: 1080, alto: 1620, alt: 'Persona de espaldas trabajando en un retrato al óleo, con el pincel y la paleta visibles.' },
+      { titulo: 'Sesiones con modelo', imagen: 'imagenes/sesiones-modelo-granada.jpg', ancho: 1080, alto: 1620, alt: 'Caballete con un estudio de retrato frente al modelo, cuyo rostro queda oculto tras el soporte.' }
+    ]
+  },
   correo: 'marabrilmartin@gmail.com',
   instagram: 'mareaaada',
   biografia: `Mi práctica artística se centra principalmente en la pintura al óleo, un medio a través del cual investigo la atmósfera de los espacios, la luz y la materialidad de la propia pintura.

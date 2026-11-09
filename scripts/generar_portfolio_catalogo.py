@@ -23,7 +23,10 @@ class Catalogo(Document):
         self.specs += [(title, title) for title in order]
         self.specs += [('revista', 'GRX'), ('revista-interiores', 'GRX · páginas interiores'),
                        ('caleta', 'La Caleta'), ('donde', '¿Dónde vamos?'),
-                       ('doler', 'Me va a doler'), ('contacto', 'Contacto')]
+                       ('doler', 'Me va a doler')]
+        if data.get('taller'):
+            self.specs.append(('taller', data['taller']['titulo']))
+        self.specs.append(('contacto', 'Contacto'))
         self.destinations = {key: f'pagina-{i}' for i, (key, _) in enumerate(self.specs)}
         self.canvas.setTitle('Mar Abril · Portfolio')
         self.canvas.setSubject('Portfolio de pintura e ilustración de Mar Abril')
@@ -132,6 +135,25 @@ class Catalogo(Document):
             self.paragraph(project['contenido'], M, y - 21, size=10.5, leading=17)
             self.finish()
 
+    def workshop(self):
+        if not self.data.get('taller'):
+            return
+        workshop = self.data['taller']
+        self.begin('taller', workshop['ubicacion'])
+        self.text('Un espacio para pintar', M, 727, font='Courier', size=25)
+        self.text('Clases de pintura · Sesiones con modelo', M, 698, size=10.5, color=SOFT)
+        gap = 18
+        width = (CONTENT - gap) / 2
+        for i, photo in enumerate(workshop['fotografias'][:2]):
+            x = M + i * (width + gap)
+            self.image(photo, x, 282, width, 367)
+            self.text(photo['titulo'], x, 262, font='Courier', size=11)
+        self.paragraph(workshop['descripcion'], M, 225, size=11, leading=18)
+        self.text('INFORMACIÓN Y CONTACTO', M, 145, size=8, color=PINK)
+        self.external(self.data['correo'], 'mailto:' + self.data['correo'], M, 119, size=10)
+        self.external('@' + self.data['instagram'], 'https://www.instagram.com/' + self.data['instagram'] + '/', M + 336, 119, size=11)
+        self.finish()
+
     def contact(self):
         self.begin('contacto', 'Contacto')
         self.text('Mar Abril', M, 687, font='Courier', size=42, color=PINK)
@@ -153,6 +175,7 @@ class Catalogo(Document):
         self.magazine_inside()
         self.caleta()
         self.alvaro()
+        self.workshop()
         self.contact()
         self.canvas.save()
         assert self.page == len(self.specs)
@@ -170,6 +193,38 @@ class Catalogo(Document):
         output.mkdir(exist_ok=True)
         shutil.copy2(target, output / target.name)
         print(f'{target.name}: {self.page} páginas · {target.stat().st_size / 1_000_000:.2f} MB')
+
+    def update_workshop(self):
+        """Inserta o actualiza la sección de clases y renumera el contacto final."""
+        if not self.data.get('taller'):
+            raise ValueError('Configura primero el apartado taller en contenido.js.')
+        target = OUT / 'Mar Abril portfolio.pdf'
+        with fitz.open(target) as current:
+            toc = current.get_toc()
+            if not toc or toc[-1][1] != 'Contacto' or toc[-1][2] != len(current):
+                raise ValueError('El contacto debe cerrar el portfolio: usa la generación completa.')
+            has_workshop = len(toc) > 1 and toc[-2][1] == self.data['taller']['titulo']
+            expected_pages = len(self.specs) if has_workshop else len(self.specs) - 1
+            if len(current) != expected_pages:
+                raise ValueError('El portfolio ha cambiado de estructura: usa la generación completa.')
+            start = len(current) - (2 if has_workshop else 1)
+            self.page = start
+            self.workshop()
+            self.contact()
+            self.canvas.save()
+            with fitz.open(self.raw) as replacement:
+                replacement.rewrite_images(dpi_threshold=190, dpi_target=160, quality=90, bitonal=False)
+                current.delete_pages(start, len(current) - 1)
+                current.insert_pdf(replacement, start_at=start)
+            current.set_toc([[1, title, i + 1] for i, (_, title) in enumerate(self.specs)])
+            current.set_pagemode('UseNone')
+            updated = self.raw.parent / 'portfolio-actualizado.pdf'
+            current.save(updated, garbage=4, deflate=True, use_objstms=1)
+        shutil.copy2(updated, target)
+        output = Path('/workspace/outputs')
+        output.mkdir(exist_ok=True)
+        shutil.copy2(target, output / target.name)
+        print(f'{target.name}: clases y sesiones con modelo en la página {start + 1} · {len(self.specs)} páginas · {target.stat().st_size / 1_000_000:.2f} MB')
 
     def update_magazine(self):
         """Renueva solo la presentación de GRX conservando las demás páginas."""
@@ -202,7 +257,9 @@ class Catalogo(Document):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--solo-revista', action='store_true', help='Actualizar solo la página de presentación de GRX del PDF existente.')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--solo-revista', action='store_true', help='Actualizar solo la página de presentación de GRX del PDF existente.')
+    mode.add_argument('--solo-taller', action='store_true', help='Añadir o actualizar las clases y sesiones con modelo del PDF existente.')
     args = parser.parse_args()
     OUT.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='mar-abril-catalogo-') as directory:
@@ -211,6 +268,8 @@ def main():
         catalog = Catalogo(load_data(), directory)
         if args.solo_revista:
             catalog.update_magazine()
+        elif args.solo_taller:
+            catalog.update_workshop()
         else:
             catalog.build()
 
