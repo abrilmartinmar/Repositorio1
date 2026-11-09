@@ -185,6 +185,8 @@ Para regenerar esta versión usando las mismas dependencias de los documentos:
 python scripts/generar_portfolio_catalogo.py
 ```
 
+La presentación de GRX incluye la portada y dos fotografías del ejemplar impreso, configuradas en `revista.fotografias` de `contenido.js`. Los HEIC originales se conservan en `imagenes/originales/` y las copias PNG mantienen la resolución completa, sin retoques. Para actualizar solo esa página, sin regenerar el resto del portfolio: `python scripts/generar_portfolio_catalogo.py --solo-revista`.
+
 `documentos/mar-abril-dossier-portfolio.pdf` reúne presentación, formación y contexto, las ocho pinturas, un detalle de «Mi reflejo», la revista GRX y las portadas musicales. `documentos/mar-abril-portfolio-visual.pdf` ofrece una lectura más visual de las mismas obras y proyectos. Los dos incluyen índice pulsable, marcadores, navegación entre páginas, enlaces a correo, Instagram y web, y un código QR. La revista aparece con su portada y, en el dossier completo, dos páginas interiores; el enlace permite leer sus 24 páginas en la web. No se atribuyen fechas, exposiciones, materiales o medidas no facilitados por Mar.
 
 El apartado Contacto permite abrir ambos documentos. Las fichas de cuadros siguen mostrando las imágenes con zoom, sin ofrecer descargas individuales. Los enlaces `?obra=TÍTULO#obras` abren directamente la ficha correspondiente, por ejemplo `?obra=Mi%20reflejo#obras`. Un título desconocido deja la página normal.

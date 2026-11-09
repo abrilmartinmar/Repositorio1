@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Portfolio de lectura continua: páginas estáticas, sin interfaz de navegación."""
 from pathlib import Path
+import argparse
 import shutil
 import tempfile
 
@@ -80,7 +81,19 @@ class Catalogo(Document):
     def magazine_intro(self):
         self.begin('revista', 'Revista ilustrada')
         self.text('GRX', M, 722, font='Courier', size=32)
-        self.magazine(0, M, 246, CONTENT, 438)
+        photos = self.data['revista'].get('fotografias', [])
+        if photos:
+            gap = 18
+            cover_width = 211
+            photo_x = M + cover_width + gap
+            photo_width = CONTENT - cover_width - gap
+            self.magazine(0, M, 297, cover_width, 366)
+            self.image(photos[0], photo_x, 478, photo_width, 204)
+            if len(photos) > 1:
+                self.image(photos[1], photo_x, 260, photo_width, 204)
+            self.text('Ejemplar impreso', photo_x, 242, size=8, color=SOFT)
+        else:
+            self.magazine(0, M, 246, CONTENT, 438)
         y = self.paragraph('Ilustrado por Mar Abril · 24 páginas', M, 214, size=10, leading=15)
         y = self.paragraph('Una revista ilustrada sobre experiencias de creadoras en Granada: la precariedad, los espacios compartidos y el apoyo entre artistas.', M, y - 15, size=10, leading=15)
         self.paragraph(self.data['enfoqueSocial'], M, y - 12, size=10, leading=15)
@@ -158,13 +171,48 @@ class Catalogo(Document):
         shutil.copy2(target, output / target.name)
         print(f'{target.name}: {self.page} páginas · {target.stat().st_size / 1_000_000:.2f} MB')
 
+    def update_magazine(self):
+        """Renueva solo la presentación de GRX conservando las demás páginas."""
+        target = OUT / 'Mar Abril portfolio.pdf'
+        with fitz.open(target) as current:
+            toc = current.get_toc()
+            entries = [entry for entry in toc if entry[1] == 'GRX']
+            if len(entries) != 1 or len(current) != len(self.specs):
+                raise ValueError('El portfolio ha cambiado de estructura: usa la generación completa.')
+            page_index = entries[0][2] - 1
+            self.page = page_index
+            self.magazine_intro()
+            self.canvas.save()
+            with fitz.open(self.raw) as replacement, fitz.open(ROOT / self.data['revista']['archivo']) as magazine:
+                for _, source, rect in self.slots:
+                    replacement[0].show_pdf_page(rect, magazine, source, keep_proportion=True)
+                replacement.rewrite_images(dpi_threshold=190, dpi_target=160, quality=90, bitonal=False)
+                current.delete_page(page_index)
+                current.insert_pdf(replacement, start_at=page_index)
+            current.set_toc(toc)
+            current.set_pagemode('UseNone')
+            updated = self.raw.parent / 'portfolio-actualizado.pdf'
+            current.save(updated, garbage=4, deflate=True, use_objstms=1)
+        shutil.copy2(updated, target)
+        output = Path('/workspace/outputs')
+        output.mkdir(exist_ok=True)
+        shutil.copy2(target, output / target.name)
+        print(f'{target.name}: revista actualizada en la página {page_index + 1} · {target.stat().st_size / 1_000_000:.2f} MB')
+
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--solo-revista', action='store_true', help='Actualizar solo la página de presentación de GRX del PDF existente.')
+    args = parser.parse_args()
     OUT.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='mar-abril-catalogo-') as directory:
         directory = Path(directory)
         fonts(directory)
-        Catalogo(load_data(), directory).build()
+        catalog = Catalogo(load_data(), directory)
+        if args.solo_revista:
+            catalog.update_magazine()
+        else:
+            catalog.build()
 
 
 if __name__ == '__main__':
